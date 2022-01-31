@@ -126,16 +126,24 @@ It MUST be publicly hosted and accessible, you cannot submit a custom API with y
 **FAQ**
 
 You can use CSS libraries like Bootstrap.
+
 Use Sass for your styles. Using BEM is optional but using proper class names is important.
+
 Use vanilla (regular) JavaScript for the project and split your code up using modules (imports/exports).
+
 You can use small JS libraries to perform tasks such as formatting dates with Moment.js
 
 
 **Marking criteria**
 
 All functionality in Level 1 should be implemented.
+
 The design should be coherent and provide a good user experience.
+
 All the customer-facing and admin pages must be fully responsive.
+
 Use appropriate names for Sass classes and folders.
+
 All code should be properly formatted and arranged with sensible variable and function names.
+
 Use modules (imports/exports) to organise your code.
