@@ -2,11 +2,11 @@
 
 Semester Project 2
 
-Goal
+**Goal**
 
 To create an e-commerce website that has both customer-facing and admin sections. Both sections should be responsive and the website will be populated by a Strapi API supplied by Noroff.
 
-Brief
+**Brief**
 
 You are to build an e-commerce website. You can choose the theme of your website. It should follow the site architecture described below.
 
