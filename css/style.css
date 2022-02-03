@@ -4,7 +4,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "IBM Plex Sans Thai Looped", sans-serif;
-  background-color: #f4f4f4;
+  background-color: #e5e5e3;
 }
 
 h1,
@@ -78,7 +78,48 @@ footer {
   margin: 0px 10px 20px 10px;
 }
 
+.login-form-common, .login-form input, .login-form button {
+  height: 60px;
+  width: 100%;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 70px auto;
+  background-color: #f2f2f2;
+  padding: 40px 50px 70px 50px;
+  border-radius: 5px;
+  -webkit-box-shadow: 6px 6px 6px #cbcbcb;
+          box-shadow: 6px 6px 6px #cbcbcb;
+}
+
+.login-form .form-content {
+  position: relative;
+}
+
 .login-form input {
-  background-color: #efefef;
+  background-color: #cbcbcb;
+  border: none;
+  margin-bottom: 40px;
+}
+
+.login-form label {
+  position: absolute;
+  top: 0px;
+  left: 5px;
+}
+
+.login-form button {
+  background-color: #238b3f;
+  color: #f2f2f2;
+  border: #238b3f 1px solid;
+}
+
+.login-form button:hover {
+  background-color: #f2f2f2;
+  color: #238b3f;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,45 @@
+.login-form-common {
+  height: 60px;
+  width: 100%;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
 .login-form {
+  max-width: 400px;
+  margin: 70px auto;
+  background-color: $color-white;
+  padding: 40px 50px 70px 50px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 6px $color-input-fields;
+
+  .form-content {
+    position: relative;
+  }
+
   input {
+    @extend .login-form-common;
     background-color: $color-input-fields;
+    border: none;
+    margin-bottom: 40px;
+  }
+
+  label {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+  }
+
+  button {
+    @extend .login-form-common;
+    background-color: $color-sucess;
+    color: $color-white;
+    border: $color-sucess 1px solid;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-sucess;
+      cursor: pointer;
+    }
   }
 }
