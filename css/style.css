@@ -4,22 +4,25 @@ body {
   width: 100%;
   height: 100%;
   font-family: "IBM Plex Sans Thai Looped", sans-serif;
-}
-
-body {
   background-color: #f4f4f4;
 }
 
-header {
+h1,
+h2 {
+  font-family: "Righteous", cursive;
+}
+
+.fa-circle {
+  font-size: 1em;
+  color: #d85c17;
+}
+
+.menu {
   background-color: #121212;
-  color: #f2f2f2;
+  padding: 20px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -28,19 +31,50 @@ header {
           align-items: center;
 }
 
-.fa-circle {
-  font-size: 0.5em;
-  color: #d85c17;
+.menu a {
+  color: #f2f2f2;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu .logo {
+  font-family: "Righteous", cursive;
+  font-size: 2.3em;
+}
+
+.menu li a {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.menu ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu li {
+  margin: 15px;
+}
+
+.menu li a:hover {
+  background: #e76821;
 }
 
 footer {
   margin-top: 300px;
+  padding: 40px;
   background-color: #121212;
   color: #f2f2f2;
+  text-align: center;
 }
 
-h1,
-h2 {
-  font-family: "Righteous", cursive;
+.fa-facebook-f,
+.fa-instagram,
+.fa-snapchat-ghost {
+  color: #f2f2f2;
+  font-size: 1.7em;
+  margin: 0px 10px 20px 10px;
 }
 /*# sourceMappingURL=style.css.map */

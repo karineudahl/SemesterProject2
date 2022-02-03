@@ -1,4 +1,7 @@
 import { baseUrl  } from "./settings/api.js";
+import createMenu from "./ui/createMenu.js";
+
+createMenu();
 
 const productsUrl = baseUrl + "/products";
 
