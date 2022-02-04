@@ -12,7 +12,19 @@ h2 {
   font-family: $font-heading;
 }
 
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
 .fa-circle {
   font-size: 1em;
   color: $color-brand;
+}
+
+img {
+  width: 100%;
 }
