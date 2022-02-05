@@ -49,7 +49,7 @@ img {
 
 .menu {
   background-color: #121212;
-  padding: 20px 40px;
+  padding: 10px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,12 +69,12 @@ img {
 
 .menu .logo {
   font-family: "Righteous", cursive;
-  font-size: 2.3em;
+  font-size: 1.3em;
 }
 
 .menu li a {
-  padding: 10px;
-  font-size: 1.2em;
+  padding: 0px;
+  font-size: 1em;
 }
 
 .menu ul {
@@ -85,11 +85,27 @@ img {
 }
 
 .menu li {
-  margin: 15px;
+  margin: 8px;
 }
 
 .menu li a:hover {
   background: #e76821;
+}
+
+@media (min-width: 900px) {
+  .menu {
+    padding: 20px 40px;
+  }
+  .menu .logo {
+    font-size: 2.3em;
+  }
+  .menu li a {
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  .menu li {
+    margin: 15px;
+  }
 }
 
 footer {
@@ -172,37 +188,63 @@ footer {
   margin-top: 50px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 650px) {
   .about-container {
     max-width: 700px;
     margin: 70px auto;
   }
 }
 
-.home-all-sneakers {
+.home-all-sneakers,
+.home-about {
   background-color: #f2f2f2;
   padding: 40px 20px;
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 500px;
 }
 
-.home-all-sneakers hr {
-  color: #d85c17;
-}
-
-.home-all-sneakers span {
+.home-all-sneakers span,
+.home-about span {
   color: #d85c17;
   font-weight: bold;
+  font-size: 1.54em;
 }
 
-.home-all-sneakers p {
+.home-all-sneakers p,
+.home-about p {
   font-size: 1.5em;
 }
 
-.home-all-sneakers button {
+.home-all-sneakers button,
+.home-about button {
   background-color: #d85c17;
   color: #f2f2f2;
   border: 1px solid #d85c17;
   padding: 15px 50px;
   font-size: 1.6em;
+  border-radius: 5px;
+}
+
+@media (min-width: 900px) {
+  .home-all-sneakers,
+  .home-about {
+    max-width: 800px;
+    margin: 70px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .home-all-sneakers .home-all-sneakers-text,
+  .home-about .home-all-sneakers-text {
+    -ms-flex-preferred-size: 140%;
+        flex-basis: 140%;
+    margin-left: 20px;
+  }
+  .home-all-sneakers .home-about-text,
+  .home-about .home-about-text {
+    -ms-flex-preferred-size: 207%;
+        flex-basis: 207%;
+    margin-left: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 .menu {
   background-color: $color-header-footer;
-  padding: 20px 40px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,12 +13,12 @@
 
   .logo {
     font-family: $font-heading;
-    font-size: 2.3em;
+    font-size: 1.3em;
   }
 
   li a {
-    padding: 10px;
-    font-size: 1.2em;
+    padding: 0px;
+    font-size: 1em;
   }
 
   ul {
@@ -27,10 +27,27 @@
   }
 
   li {
-    margin: 15px;
+    margin: 8px;
   }
 
   li a:hover {
     background: lighten($color-brand, 5%);
+  }
+
+  @media (min-width: $computer-min-width) {
+    padding: 20px 40px;
+
+    .logo {
+      font-size: 2.3em;
+    }
+
+    li a {
+      padding: 10px;
+      font-size: 1.2em;
+    }
+
+    li {
+      margin: 15px;
+    }
   }
 }

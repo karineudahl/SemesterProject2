@@ -1,15 +1,14 @@
-.home-all-sneakers {
+.home-all-sneakers,
+.home-about {
   background-color: $color-white;
   padding: 40px 20px;
-  margin: 20px;
-
-  hr {
-    color: $color-brand;
-  }
+  margin: 20px auto;
+  max-width: 500px;
 
   span {
     color: $color-brand;
     font-weight: bold;
+    font-size: 1.54em;
   }
 
   p {
@@ -22,5 +21,22 @@
     border: 1px solid $color-brand;
     padding: 15px 50px;
     font-size: 1.6em;
+    border-radius: 5px;
+  }
+
+  @media (min-width: $computer-min-width) {
+    max-width: 800px;
+    margin: 70px auto;
+    display: flex;
+
+    .home-all-sneakers-text {
+      flex-basis: 140%;
+      margin-left: 20px;
+    }
+
+    .home-about-text {
+      flex-basis: 207%;
+      margin-left: 20px;
+    }
   }
 }
