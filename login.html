@@ -12,33 +12,31 @@
     <script src="https://kit.fontawesome.com/3ca04481c9.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="wrapper">
+
+        
+        <header>
+            <div class="menu-container"></div>
+        </header>
+
+        
+        <main>   
+            <form id="form" class="login-form" action="submit.php" method="POST">
+                <h1>Login</h1>
+                <div class="form-content">
+                    <input type="text" id="name">
+                    <label for="name">Username *</label>         
+                </div>
     
-    <header>
-        <div class="menu-container"></div>
-    </header>
-
-
-    <main>
-
-        
-
-        <form id="form" class="login-form" action="submit.php" method="POST">
-            <h1>Login</h1>
-            <div class="form-content">
-                <input type="text" id="name">
-                <label for="name">Username *</label>         
-            </div>
-
-            <div class="form-content">   
-                <input type="text" id="email">
-                <label for="email">Password *</label>
-            </div>
-        
-
-            <button>Login</button>
-        </form>
-
-    </main>
+                <div class="form-content">   
+                    <input type="text" id="email">
+                    <label for="email">Password *</label>
+                </div>
+                <button>Login</button>
+            </form>   
+        </main>
+    </div>
+    
 
 
     <footer>
@@ -57,6 +55,7 @@
             <i class="fas fa-circle"></i>
         </div>
     </footer>
+
 
     <script src="js/index.js" type="module"></script>
 

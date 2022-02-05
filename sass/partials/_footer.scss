@@ -1,9 +1,9 @@
 footer {
-  margin-top: 300px; // OBS REMOVE LATER
   padding: 40px;
   background-color: $color-header-footer;
   color: $color-white;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .fa-facebook-f,
