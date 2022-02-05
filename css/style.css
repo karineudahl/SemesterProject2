@@ -77,8 +77,8 @@ img {
 }
 
 .menu li a {
-  padding: 0px;
-  font-size: 1em;
+  padding: 3px;
+  font-size: 0.9em;
 }
 
 .menu ul {
@@ -86,6 +86,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 
 .menu li {
@@ -96,12 +98,15 @@ img {
   background: #e76821;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 650px) {
   .menu {
-    padding: 20px 40px;
+    padding: 10px 30px;
   }
   .menu .logo {
-    font-size: 2.3em;
+    font-size: 2.1em;
+  }
+  .menu .fa-circle {
+    font-size: 1em;
   }
   .menu li a {
     padding: 10px;
