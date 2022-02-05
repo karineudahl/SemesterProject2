@@ -18,8 +18,9 @@ const productsUrl = baseUrl + "/products";
            container.innerHTML += `<div class="product-content">
                                         <a href="products-details.html?id=${product.id}">
                                             <img src="${baseUrl + product.image.formats.thumbnail.url}" alt="${product.title}">
+                                            
                                             <h2>${product.title}<h2>
-                                            <p>${product.price}<p> 
+                                            <p>kr. ${product.price}<p> 
                                         </a>
                                     </div>` 
        }) 
@@ -29,3 +30,7 @@ const productsUrl = baseUrl + "/products";
     }
 
 })();
+
+
+
+{/* <div style="background-image: url(${baseUrl + product.image.formats.thumbnail.url})" class="product-image"></div> */}
