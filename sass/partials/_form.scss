@@ -1,11 +1,12 @@
-.login-form-common {
+.form-common {
   height: 60px;
   width: 100%;
   font-size: 1.2em;
   border-radius: 5px;
 }
 
-.login-form {
+.login-form,
+.add-edit-delete-form {
   max-width: 400px;
   margin: 70px auto;
   background-color: $color-white;
@@ -18,7 +19,7 @@
   }
 
   input {
-    @extend .login-form-common;
+    @extend .form-common;
     background-color: $color-input-fields;
     border: none;
     margin-bottom: 40px;
@@ -31,15 +32,39 @@
   }
 
   button {
-    @extend .login-form-common;
-    background-color: $color-sucess;
+    @extend .form-common;
     color: $color-white;
-    border: $color-sucess 1px solid;
+    cursor: pointer;
+    margin-bottom: 15px;
 
-    &:hover {
-      background-color: $color-white;
-      color: $color-sucess;
-      cursor: pointer;
+    &.login-add {
+      background-color: $color-sucess;
+      border: $color-sucess 1px solid;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-sucess;
+      }
+    }
+
+    &.edit {
+      background-color: $color-brand;
+      border: $color-brand 1px solid;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-brand;
+      }
+    }
+
+    &.delete {
+      background-color: $color-error;
+      border: $color-error 1px solid;
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-error;
+      }
     }
   }
 }

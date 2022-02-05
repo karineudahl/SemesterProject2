@@ -15,11 +15,13 @@ const productsUrl = baseUrl + "/products";
         console.log(products)
     
         products.forEach(function(product) {
-           container.innerHTML += `<a href="products-details.html?id=${product.id}">
-                                        <img src="${baseUrl + product.image.formats.thumbnail.url}" alt="${product.title}">
-                                        <h2>${product.title}<h2>
-                                        <p>${product.price}<p> 
-                                    </a>` 
+           container.innerHTML += `<div class="product-content">
+                                        <a href="products-details.html?id=${product.id}">
+                                            <img src="${baseUrl + product.image.formats.thumbnail.url}" alt="${product.title}">
+                                            <h2>${product.title}<h2>
+                                            <p>${product.price}<p> 
+                                        </a>
+                                    </div>` 
        }) 
     }
     catch {
