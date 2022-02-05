@@ -4,24 +4,35 @@
   padding: 40px 20px;
   margin: 20px auto;
   max-width: 500px;
+  box-shadow: 6px 6px 6px $color-input-fields;
+  border-top: 2px solid $color-brand;
+  border-radius: 2px;
 
   span {
     color: $color-brand;
     font-weight: bold;
-    font-size: 1.54em;
+    font-size: 1.4em;
   }
 
   p {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   button {
     background-color: $color-brand;
     color: $color-white;
+    box-shadow: 4px 4px 4px $color-input-fields;
     border: 1px solid $color-brand;
-    padding: 15px 50px;
-    font-size: 1.6em;
+    padding: 10px 40px;
+    font-size: 1.1em;
     border-radius: 5px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-brand;
+      cursor: pointer;
+    }
   }
 
   @media (min-width: $computer-min-width) {
