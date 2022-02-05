@@ -69,7 +69,7 @@ img {
 
 .menu .logo {
   font-family: "Righteous", cursive;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 
 .menu li a {
@@ -85,7 +85,7 @@ img {
 }
 
 .menu li {
-  margin: 8px;
+  margin: 5px;
 }
 
 .menu li a:hover {
