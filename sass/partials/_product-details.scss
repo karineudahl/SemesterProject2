@@ -1,0 +1,11 @@
+.detail-container {
+  margin: 30px;
+
+  //   .detail-img {
+  //     flex-basis: 100%;
+  //   }
+
+  @media (min-width: $tablet-min-width) {
+    display: flex;
+  }
+}

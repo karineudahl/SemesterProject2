@@ -9,15 +9,33 @@ p {
 }
 
 h1 {
-  font-size: 3em;
-}
-
-h2 {
   font-size: 2em;
 }
 
+@media (min-width: 900px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+@media (min-width: 900px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
 h3 {
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+
+@media (min-width: 900px) {
+  h3 {
+    font-size: 1.5em;
+  }
 }
 
 p {
@@ -383,5 +401,17 @@ footer {
 .product-content:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
+}
+
+.detail-container {
+  margin: 30px;
+}
+
+@media (min-width: 650px) {
+  .detail-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=style.css.map */
