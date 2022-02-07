@@ -1,0 +1,11 @@
+.cart-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px;
+}
+
+.cart-content img {
+  height: 50px;
+}
+/*# sourceMappingURL=cart.css.map */

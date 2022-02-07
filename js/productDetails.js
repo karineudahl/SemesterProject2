@@ -2,6 +2,7 @@ import { productUrl  } from "./settings/api.js";
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import { saveToStorage, getFromStorage } from "./utils/localStorage.js";
+import { cartList } from "./settings/variables.js";
 
 createMenu(); 
 
@@ -11,7 +12,7 @@ const id = params.get("id");
 const url = productUrl + id; 
 
 const detailsContainer = document.querySelector(".product-details-container");
-let cartArray = getFromStorage("cartList"); 
+let cartArray = getFromStorage(cartList); 
 
 async function detailsProduct() {
     try {
@@ -38,7 +39,7 @@ async function detailsProduct() {
 
         function addToStorage() {
             cartArray.push(details);
-            saveToStorage("cartList", cartArray); 
+            saveToStorage(cartList, cartArray); 
         }
     }
 
