@@ -5,14 +5,13 @@ import { saveToStorage, getFromStorage } from "./utils/localStorage.js";
 
 createMenu(); 
 
-const detailsContainer = document.querySelector(".product-details-container");
-
 const queryString = document.location.search; 
 const params = new URLSearchParams(queryString); 
 const id = params.get("id"); 
 const url = productUrl + id; 
 
-let cartArray = getFromStorage(); 
+const detailsContainer = document.querySelector(".product-details-container");
+let cartArray = getFromStorage("cartList"); 
 
 async function detailsProduct() {
     try {
@@ -20,15 +19,14 @@ async function detailsProduct() {
         const details = await response.json(); 
 
         detailsContainer.innerHTML =    `<div class="detail-container">
-                                            <div class="detail-img">                                    
-                                                <img src="${baseUrl + details.image.formats.thumbnail.url}" alt="${details.title}"> 
+                                            <div class="detail-img-container">                                    
+                                                <img class="detail-img" src="${baseUrl + details.image.formats.large.url}" alt="${details.title}"> 
                                             </div>    
                                             <div>
                                                 <h1>${details.title}<h1>
-                                                <p>kr. ${details.price}<p>   
-                                                <h2>Description<h2>  
+                                                <p>kr. ${details.price}<p>                                      
                                                 <p>${details.description}<p>
-                                                <button class="cta-add-to-cart" data-product="${details.id}">Add to cart</button>
+                                                <button class="btn cta-add-to-cart" data-product="${details.id}">Add to cart</button>
                                             </div>                                                                                                             
                                         </div>`;
      
@@ -40,20 +38,12 @@ async function detailsProduct() {
 
         function addToStorage() {
             cartArray.push(details);
-            saveToStorage("list", cartArray); 
+            saveToStorage("cartList", cartArray); 
         }
-
-
-        // function buttonAddToCart() {
-        //     cartArray = JSON.parse(localStorage.getItem("cartList")); 
-        //     if(cartArray === null) cartArray = []; 
-        //     cartArray.push(details); 
-        //     localStorage.setItem("cartList", JSON.stringify(cartArray)); 
-        // }
     }
 
     catch(error) {
-        console.log(error); 
+        detailsContainer.innerHTML = "An error has occured"
     }
 }
 

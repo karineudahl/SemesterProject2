@@ -11,13 +11,11 @@ const productsUrl = baseUrl + "/products";
     try {
         const response = await fetch(productsUrl); 
         const products = await response.json(); 
-
-        console.log(products)
     
         products.forEach(function(product) {
            container.innerHTML += `<div class="product-content">
                                         <a href="products-details.html?id=${product.id}">
-                                            <img src="${baseUrl + product.image.formats.thumbnail.url}" alt="${product.title}">
+                                            <img src="${baseUrl + product.image.formats.large.url}" alt="${product.title}">
                                             
                                             <h2>${product.title}<h2>
                                             <p>kr. ${product.price}<p> 
@@ -30,7 +28,3 @@ const productsUrl = baseUrl + "/products";
     }
 
 })();
-
-
-
-{/* <div style="background-image: url(${baseUrl + product.image.formats.thumbnail.url})" class="product-image"></div> */}

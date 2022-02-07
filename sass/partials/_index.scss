@@ -21,20 +21,7 @@
   }
 
   button {
-    background-color: $color-brand;
-    color: $color-white;
-    box-shadow: 4px 4px 4px $color-input-fields;
-    border: 1px solid $color-brand;
-    padding: 10px 40px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    text-transform: uppercase;
-
-    &:hover {
-      background-color: $color-white;
-      color: $color-brand;
-      cursor: pointer;
-    }
+    width: 40%;
   }
 
   @media (min-width: $computer-min-width) {

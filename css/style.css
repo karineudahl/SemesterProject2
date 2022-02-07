@@ -42,6 +42,49 @@ p {
   font-size: 1em;
 }
 
+.btn {
+  height: 60px;
+  width: 100%;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  -webkit-box-shadow: 4px 4px 4px #cbcbcb;
+          box-shadow: 4px 4px 4px #cbcbcb;
+}
+
+.btn.orange, .btn.cta-add-to-cart {
+  background-color: #d85c17;
+  border: #d85c17 1px solid;
+}
+
+.btn.orange:hover, .btn.cta-add-to-cart:hover {
+  background-color: #f2f2f2;
+  color: #d85c17;
+}
+
+.btn.login-add {
+  background-color: #238b3f;
+  border: #238b3f 1px solid;
+}
+
+.btn.login-add:hover {
+  background-color: #f2f2f2;
+  color: #238b3f;
+}
+
+.btn.delete {
+  background-color: #d82617;
+  border: #d82617 1px solid;
+}
+
+.btn.delete:hover {
+  background-color: #f2f2f2;
+  color: #d82617;
+}
+
 html,
 body {
   height: 100%;
@@ -170,15 +213,6 @@ footer {
   margin: 0px 10px 20px 10px;
 }
 
-.form-common, .login-form input,
-.add-edit-delete-form input, .login-form button,
-.add-edit-delete-form button {
-  height: 60px;
-  width: 100%;
-  font-size: 1.2em;
-  border-radius: 5px;
-}
-
 .login-form,
 .add-edit-delete-form {
   max-width: 400px;
@@ -197,6 +231,10 @@ footer {
 
 .login-form input,
 .add-edit-delete-form input {
+  height: 60px;
+  width: 100%;
+  font-size: 1.2em;
+  border-radius: 5px;
   background-color: #cbcbcb;
   border: none;
   margin-bottom: 40px;
@@ -207,49 +245,6 @@ footer {
   position: absolute;
   top: 0px;
   left: 5px;
-}
-
-.login-form button,
-.add-edit-delete-form button {
-  color: #f2f2f2;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-.login-form button.login-add,
-.add-edit-delete-form button.login-add {
-  background-color: #238b3f;
-  border: #238b3f 1px solid;
-}
-
-.login-form button.login-add:hover,
-.add-edit-delete-form button.login-add:hover {
-  background-color: #f2f2f2;
-  color: #238b3f;
-}
-
-.login-form button.edit,
-.add-edit-delete-form button.edit {
-  background-color: #d85c17;
-  border: #d85c17 1px solid;
-}
-
-.login-form button.edit:hover,
-.add-edit-delete-form button.edit:hover {
-  background-color: #f2f2f2;
-  color: #d85c17;
-}
-
-.login-form button.delete,
-.add-edit-delete-form button.delete {
-  background-color: #d82617;
-  border: #d82617 1px solid;
-}
-
-.login-form button.delete:hover,
-.add-edit-delete-form button.delete:hover {
-  background-color: #f2f2f2;
-  color: #d82617;
 }
 
 .about-container .about-content {
@@ -310,22 +305,7 @@ footer {
 
 .home-all-sneakers button,
 .home-about button {
-  background-color: #d85c17;
-  color: #f2f2f2;
-  -webkit-box-shadow: 4px 4px 4px #cbcbcb;
-          box-shadow: 4px 4px 4px #cbcbcb;
-  border: 1px solid #d85c17;
-  padding: 10px 40px;
-  font-size: 1.1em;
-  border-radius: 5px;
-  text-transform: uppercase;
-}
-
-.home-all-sneakers button:hover,
-.home-about button:hover {
-  background-color: #f2f2f2;
-  color: #d85c17;
-  cursor: pointer;
+  width: 40%;
 }
 
 @media (min-width: 900px) {
@@ -407,11 +387,42 @@ footer {
   margin: 30px;
 }
 
+.detail-container img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 30px 30px 0px 0px;
+}
+
+.detail-container .detail-img-container {
+  text-align: center;
+}
+
+.detail-container p {
+  font-size: 0.5em;
+}
+
 @media (min-width: 650px) {
   .detail-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .detail-container img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (min-width: 900px) {
+  .detail-container {
+    max-width: 1000px;
+    margin: 70px auto;
+  }
+  .detail-container img {
+    width: 500px;
+    height: 500px;
   }
 }
 /*# sourceMappingURL=style.css.map */

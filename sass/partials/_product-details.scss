@@ -1,11 +1,37 @@
 .detail-container {
   margin: 30px;
 
-  //   .detail-img {
-  //     flex-basis: 100%;
-  //   }
+  img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 30px 30px 0px 0px;
+  }
+
+  .detail-img-container {
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.5em;
+  }
 
   @media (min-width: $tablet-min-width) {
     display: flex;
+
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: $computer-min-width) {
+    max-width: 1000px;
+    margin: 70px auto;
+
+    img {
+      width: 500px;
+      height: 500px;
+    }
   }
 }

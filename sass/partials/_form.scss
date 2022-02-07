@@ -1,9 +1,9 @@
-.form-common {
-  height: 60px;
-  width: 100%;
-  font-size: 1.2em;
-  border-radius: 5px;
-}
+// .form-common {
+//   height: 60px;
+//   width: 100%;
+//   font-size: 1.2em;
+//   border-radius: 5px;
+// }
 
 .login-form,
 .add-edit-delete-form {
@@ -19,7 +19,10 @@
   }
 
   input {
-    @extend .form-common;
+    height: 60px;
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 5px;
     background-color: $color-input-fields;
     border: none;
     margin-bottom: 40px;
@@ -29,42 +32,5 @@
     position: absolute;
     top: 0px;
     left: 5px;
-  }
-
-  button {
-    @extend .form-common;
-    color: $color-white;
-    cursor: pointer;
-    margin-bottom: 15px;
-
-    &.login-add {
-      background-color: $color-sucess;
-      border: $color-sucess 1px solid;
-
-      &:hover {
-        background-color: $color-white;
-        color: $color-sucess;
-      }
-    }
-
-    &.edit {
-      background-color: $color-brand;
-      border: $color-brand 1px solid;
-
-      &:hover {
-        background-color: $color-white;
-        color: $color-brand;
-      }
-    }
-
-    &.delete {
-      background-color: $color-error;
-      border: $color-error 1px solid;
-
-      &:hover {
-        background-color: $color-white;
-        color: $color-error;
-      }
-    }
   }
 }
