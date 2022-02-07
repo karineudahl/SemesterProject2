@@ -16,9 +16,13 @@ if(productsInCart.length === 0) {
 
 productsInCart.forEach((cartElement) => {
     cartContainer.innerHTML +=  `<div class="cart-content">
-                                    <img src="${baseUrl + cartElement.image.formats.large.url}" alt="${cartElement.title}">                                
-                                    <h1>${cartElement.title}</h1>
-                                    <p>${cartElement.price}</p>
-                                    <button><i class="fas fa-times"></i></button>
+                                    <div>                                
+                                        <img src="${baseUrl + cartElement.image.formats.large.url}" alt="${cartElement.title}">    
+                                        <p>${cartElement.title}</p> 
+                                    </div>                           
+                                    <div>  
+                                        <p>${cartElement.price}</p>
+                                        <button><i class="fas fa-times"></i></button>
+                                    </div>
                                 </div>`
 })

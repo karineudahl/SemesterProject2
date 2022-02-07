@@ -3,9 +3,20 @@
   display: -ms-flexbox;
   display: flex;
   margin: 20px;
+  max-height: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .cart-content img {
-  height: 50px;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=cart.css.map */
