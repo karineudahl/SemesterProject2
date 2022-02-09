@@ -40,6 +40,7 @@ async function detailsProduct() {
         function addToStorage() {
             cartArray.push(details);
             saveToStorage(cartList, cartArray); 
+            
         }
     }
 
