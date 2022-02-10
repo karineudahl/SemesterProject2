@@ -3,10 +3,8 @@ import { baseUrl } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import { saveToStorage, getFromStorage } from "./utils/localStorage.js";
 import { cartList, cartCounter } from "./settings/variables.js";
-// import { displayCart } from "./ui/displayCart.js";
 
 createMenu(); 
-// displayCart();
 
 const queryString = document.location.search; 
 const params = new URLSearchParams(queryString); 
@@ -53,9 +51,6 @@ async function detailsProduct() {
                 cartCount.innerHTML = numberInCart = 1;
             }
         }
-
-
-
     }
 
     catch(error) {
@@ -64,12 +59,3 @@ async function detailsProduct() {
 }
 
 detailsProduct();
-
-export function displayCart() {
-    let prodCount = getFromStorage(cartCounter); 
-    if(prodCount) {
-        cartCount.innerHTML = prodCount;
-    }
-}
-
-displayCart();

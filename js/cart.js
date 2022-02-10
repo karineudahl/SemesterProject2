@@ -2,9 +2,6 @@ import createMenu from "./ui/createMenu.js";
 import { baseUrl } from "./settings/api.js";
 import { getFromStorage, saveToStorage } from "./utils/localStorage.js";
 import { cartList, cartCounter } from "./settings/variables.js";
-import { displayCart } from "./productDetails.js";
-
-displayCart();
 
 createMenu(); 
 
@@ -66,17 +63,4 @@ function removeFromList(event) {
             break;
         };
     }
-
 };
-
-
-// export function displayCart() {
-//     const cartCount = document.querySelector(".cart-count");
-//     let prodCount = getFromStorage(cartCounter); 
-//     if(prodCount) {
-//         cartCount.innerHTML = prodCount;
-//     }
-// }
-
-// displayCart();
-

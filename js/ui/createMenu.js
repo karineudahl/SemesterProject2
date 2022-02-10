@@ -14,4 +14,14 @@ export default function createMenu() {
                                     <li><a href="cart.html"><i class="fas fa-shopping-bag"><span class="cart-count">0</span></i></a></li> 
                                 </ul>
                             </nav>`;
+                            
+    function displayCart() {
+        const cartCount = document.querySelector(".cart-count");
+        let prodCount = localStorage.getItem("cartsCount"); 
+        if(prodCount) {
+            cartCount.textContent = prodCount;
+        }
+    }
+                            
+    displayCart();
 }
