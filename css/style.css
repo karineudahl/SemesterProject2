@@ -228,8 +228,10 @@ footer {
   position: relative;
 }
 
-.login-form input,
-.add-edit-delete-form input {
+.login-form input, .login-form .product-page-container .search, .product-page-container .login-form .search,
+.add-edit-delete-form input,
+.add-edit-delete-form .product-page-container .search,
+.product-page-container .add-edit-delete-form .search {
   height: 60px;
   width: 100%;
   font-size: 1.2em;
@@ -331,7 +333,14 @@ footer {
   }
 }
 
-.product-container {
+@media (min-width: 900px) {
+  .product-page-container {
+    max-width: 1500px;
+    margin: 70px auto;
+  }
+}
+
+.product-page-container .product-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
@@ -339,18 +348,16 @@ footer {
 }
 
 @media (min-width: 650px) {
-  .product-container {
+  .product-page-container .product-container {
     -ms-grid-columns: (minmax(33%, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
   }
 }
 
 @media (min-width: 900px) {
-  .product-container {
+  .product-page-container .product-container {
     -ms-grid-columns: (minmax(25%, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    max-width: 1500px;
-    margin: 70px auto;
   }
 }
 

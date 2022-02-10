@@ -1,15 +1,24 @@
-.product-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-
-  @media (min-width: $tablet-min-width) {
-    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
-  }
-
+.product-page-container {
   @media (min-width: $computer-min-width) {
-    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     max-width: 1500px;
     margin: 70px auto;
+  }
+
+  .search {
+    @extend input;
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+
+    @media (min-width: $tablet-min-width) {
+      grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    }
+
+    @media (min-width: $computer-min-width) {
+      grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    }
   }
 }
 

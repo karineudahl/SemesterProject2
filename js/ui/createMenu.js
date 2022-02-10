@@ -11,7 +11,7 @@ export default function createMenu() {
                                     <li><a href="products.html">Shoes</a></li> 
                                     <li><a href="about.html">About</a></li> 
                                     <li><a href="login.html"><i class="fas fa-user"></i></a></li> 
-                                    <li><a href="cart.html"><i class="fas fa-shopping-bag"></i></a></li> 
+                                    <li><a href="cart.html"><i class="fas fa-shopping-bag"><span class="cart-count">0</span></i></a></li> 
                                 </ul>
                             </nav>`;
 }

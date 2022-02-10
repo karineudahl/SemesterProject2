@@ -1,7 +1,10 @@
 import createMenu from "./ui/createMenu.js";
 import { baseUrl } from "./settings/api.js";
 import { getFromStorage, saveToStorage } from "./utils/localStorage.js";
-import { cartList } from "./settings/variables.js";
+import { cartList, cartCounter } from "./settings/variables.js";
+import { displayCart } from "./productDetails.js";
+
+displayCart();
 
 createMenu(); 
 
@@ -9,6 +12,7 @@ const productsInCart = getFromStorage(cartList);
 const cartContainer = document.querySelector(".cart-items"); 
 const nothingInCart = document.querySelector(".no-products-container"); 
 const totalContainer = document.querySelector(".cart-total-container"); 
+const cartCount = document.querySelector(".cart-count");
 let total = 0;
 
 productsInCart.forEach((cartElement) => {  
@@ -49,7 +53,30 @@ function removeFromList(event) {
             productsInCart.splice(i, 1);
             saveToStorage(cartList, productsInCart);
             location.reload();
+            
+            let numberInCart = parseInt(getFromStorage(cartCounter));     
+            if(numberInCart) {
+                saveToStorage(cartCounter, numberInCart - 1);
+                cartCount.innerHTML = numberInCart - 1;
+            } else {
+                saveToStorage(cartCounter, 1);
+                cartCount.innerHTML = numberInCart = 1;
+            } 
+            
             break;
         };
     }
+
 };
+
+
+// export function displayCart() {
+//     const cartCount = document.querySelector(".cart-count");
+//     let prodCount = getFromStorage(cartCounter); 
+//     if(prodCount) {
+//         cartCount.innerHTML = prodCount;
+//     }
+// }
+
+// displayCart();
+
