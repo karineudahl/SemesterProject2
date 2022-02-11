@@ -1,29 +1,34 @@
-import { heroBannerUrl  } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
+import { homeBanner } from "./ui/homeBanner.js";
+import { productUrl  } from "./settings/api.js";
 
+homeBanner();
 createMenu();
+ 
+const featuredContainer = document.querySelector(".featured-container");
 
-const heroBannerContainer = document.querySelector(".hero-banner-container"); 
-
-async function heroBanner() {
+async function getProducts() {
     try {
-        const response = await fetch(heroBannerUrl); 
+        const response = await fetch(productUrl); 
         const products = await response.json(); 
-    
-        products.forEach(function(product) {
-            heroBannerContainer.innerHTML += `<div class="product-content">
-                                             <img src="${product.hero_banner.formats.medium.url}" alt="">  
-                                     </div>` 
-        }); 
+        
+        for (var i = 0; i < products.length; i++) {
+            if(products[i].featured === true) {
+                featuredContainer.innerHTML += `<div class="product-content">
+                                                    <a href="products-details.html?id=${products[i].id}">
+                                                        <img src="${products[i].image.formats.large.url}" alt="${products[i].title}">  
+                                                        <h2>${products[i].title}<h2>
+                                                        <p>kr. ${products[i].price}<p> 
+                                                    </a>
+                                                </div>`
+            }
+        }
     }
 
     catch {
-        heroBannerContainer.innerHTML = "An error has occured"
+        console.log(error)
+        featuredContainer.innerHTML = "An error has occured"
     }
 }
 
-heroBanner();
-
-
-
-    
+getProducts();

@@ -1,5 +1,6 @@
 .home-all-sneakers,
-.home-about {
+.home-about,
+.home-featured {
   background-color: $color-white;
   padding: 40px 20px;
   margin: 20px auto;
@@ -39,4 +40,13 @@
       margin-left: 20px;
     }
   }
+}
+
+.hero-banner {
+  background-size: cover;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  min-width: 100%;
 }

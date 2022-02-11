@@ -16,6 +16,7 @@ async function getProducts() {
     }
 
     catch {
+        console.log(error)
         containerShoes.innerHTML = "An error has occured"
     }
 }

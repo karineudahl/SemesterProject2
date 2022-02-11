@@ -297,7 +297,8 @@ footer {
 }
 
 .home-all-sneakers,
-.home-about {
+.home-about,
+.home-featured {
   background-color: #f2f2f2;
   padding: 40px 20px;
   margin: 20px auto;
@@ -316,25 +317,29 @@ footer {
 }
 
 .home-all-sneakers span,
-.home-about span {
+.home-about span,
+.home-featured span {
   color: #d85c17;
   font-weight: bold;
   font-size: 1.4em;
 }
 
 .home-all-sneakers p,
-.home-about p {
+.home-about p,
+.home-featured p {
   font-size: 1.3em;
 }
 
 .home-all-sneakers button,
-.home-about button {
+.home-about button,
+.home-featured button {
   width: 40%;
 }
 
 @media (min-width: 900px) {
   .home-all-sneakers,
-  .home-about {
+  .home-about,
+  .home-featured {
     max-width: 800px;
     margin: 70px auto;
     -webkit-box-orient: horizontal;
@@ -343,17 +348,28 @@ footer {
             flex-direction: row;
   }
   .home-all-sneakers .home-all-sneakers-text,
-  .home-about .home-all-sneakers-text {
+  .home-about .home-all-sneakers-text,
+  .home-featured .home-all-sneakers-text {
     -ms-flex-preferred-size: 140%;
         flex-basis: 140%;
     margin-left: 20px;
   }
   .home-all-sneakers .home-about-text,
-  .home-about .home-about-text {
+  .home-about .home-about-text,
+  .home-featured .home-about-text {
     -ms-flex-preferred-size: 207%;
         flex-basis: 207%;
     margin-left: 20px;
   }
+}
+
+.hero-banner {
+  background-size: cover;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  min-width: 100%;
 }
 
 @media (min-width: 900px) {
