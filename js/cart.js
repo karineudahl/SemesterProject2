@@ -1,5 +1,4 @@
 import createMenu from "./ui/createMenu.js";
-import { baseUrl } from "./settings/api.js";
 import { getFromStorage, saveToStorage } from "./utils/localStorage.js";
 import { cartList, cartCounter } from "./settings/variables.js";
 
@@ -15,7 +14,7 @@ let total = 0;
 productsInCart.forEach((cartElement) => {  
     cartContainer.innerHTML +=  `<div class="cart-content">
                                     <div class="cart-content-container">                                
-                                        <img src="${baseUrl + cartElement.image.formats.large.url}" alt="${cartElement.title}"> 
+                                        <img src="${cartElement.image.formats.large.url}" alt="${cartElement.title}"> 
                                         <div>
                                             <p>${cartElement.title}</p>
                                             <a href="products-details.html?id=${cartElement.id}">View product</a>

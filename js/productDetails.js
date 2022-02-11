@@ -1,5 +1,4 @@
 import { productUrl  } from "./settings/api.js";
-import { baseUrl } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import { saveToStorage, getFromStorage } from "./utils/localStorage.js";
 import { cartList, cartCounter } from "./settings/variables.js";
@@ -22,7 +21,7 @@ async function detailsProduct() {
 
         detailsContainer.innerHTML =    `<div class="detail-container">
                                             <div class="detail-img-container">                                    
-                                                <img class="detail-img" src="${baseUrl + details.image.formats.large.url}" alt="${details.title}"> 
+                                                <img class="detail-img" src="${details.image.formats.large.url}" alt="${details.title}"> 
                                             </div>    
                                             <div>
                                                 <h1>${details.title}<h1>
