@@ -175,6 +175,19 @@ img {
   background: #e76821;
 }
 
+.menu .fa-shopping-bag {
+  position: relative;
+}
+
+.menu .cart-count {
+  background-color: #d85c17;
+  border-radius: 100%;
+  padding: 1px 5px;
+  font-size: 0.9em;
+  position: absolute;
+  top: -7px;
+}
+
 @media (min-width: 650px) {
   .menu {
     padding: 10px 30px;

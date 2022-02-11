@@ -1,3 +1,6 @@
+import { getFromStorage } from "../utils/localStorage.js";
+import { cartCounter } from "../settings/variables.js";
+
 export default function createMenu() {
 
     const container = document.querySelector(".menu-container"); 
@@ -17,11 +20,11 @@ export default function createMenu() {
                             
     function displayCart() {
         const cartCount = document.querySelector(".cart-count");
-        let prodCount = localStorage.getItem("cartsCount"); 
+        let prodCount = getFromStorage(cartCounter); 
         if(prodCount) {
-            cartCount.textContent = prodCount;
+            cartCount.innerHTML = prodCount;
         }
     }
                             
     displayCart();
-}
+} 

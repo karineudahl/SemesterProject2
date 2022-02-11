@@ -38,6 +38,19 @@
     background: lighten($color-brand, 5%);
   }
 
+  .fa-shopping-bag {
+    position: relative;
+  }
+
+  .cart-count {
+    background-color: $color-brand;
+    border-radius: 100%;
+    padding: 1px 5px;
+    font-size: 0.9em;
+    position: absolute;
+    top: -7px;
+  }
+
   @media (min-width: $tablet-min-width) {
     padding: 10px 30px;
 
