@@ -311,14 +311,19 @@ footer {
   }
 }
 
+@media (min-width: 900px) {
+  .home-featured-container {
+    margin: 40px;
+  }
+}
+
 .home-featured {
   background-color: #f2f2f2;
-  padding: 40px 20px;
-  margin: -110px auto 100px auto;
-  max-width: 1000px;
+  padding: 10px 20px;
+  margin: -110px 20px 100px 20px;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
-  border-top: 2px solid #d85c17;
+  border-top: 4px solid #d85c17;
   border-radius: 2px;
 }
 
@@ -328,6 +333,7 @@ footer {
 
 .home-featured h1 {
   text-transform: uppercase;
+  padding-bottom: 80px;
 }
 
 @media (min-width: 650px) {
@@ -341,6 +347,13 @@ footer {
   display: grid;
   -ms-grid-columns: (minmax(33%, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+}
+
+@media (min-width: 900px) {
+  .home-featured {
+    margin: -110px auto 100px auto;
+    max-width: 1300px;
+  }
 }
 
 .home-all-sneakers,

@@ -11,13 +11,17 @@
   }
 }
 
+.home-featured-container {
+  @media (min-width: $computer-min-width) {
+    margin: 40px;
+  }
+}
 .home-featured {
   background-color: $color-white;
-  padding: 40px 20px;
-  margin: -110px auto 100px auto;
-  max-width: 1000px;
+  padding: 10px 20px;
+  margin: -110px 20px 100px 20px;
   box-shadow: 6px 6px 6px $color-input-fields;
-  border-top: 2px solid $color-brand;
+  border-top: 4px solid $color-brand;
   border-radius: 2px;
 
   .home-featured-heading {
@@ -26,6 +30,7 @@
 
   h1 {
     text-transform: uppercase;
+    padding-bottom: 80px;
 
     @media (min-width: $tablet-min-width) {
       font-size: 4em;
@@ -35,6 +40,11 @@
   .featured-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  }
+
+  @media (min-width: $computer-min-width) {
+    margin: -110px auto 100px auto;
+    max-width: 1300px;
   }
 }
 
