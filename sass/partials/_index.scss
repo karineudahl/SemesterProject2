@@ -1,6 +1,42 @@
-.home-all-sneakers,
-.home-about,
+.hero-banner {
+  background-size: cover;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  min-width: 100%;
+
+  @media (min-width: $tablet-min-width) {
+    height: 700px;
+  }
+}
+
 .home-featured {
+  background-color: $color-white;
+  padding: 40px 20px;
+  margin: -110px auto 100px auto;
+  max-width: 1000px;
+  box-shadow: 6px 6px 6px $color-input-fields;
+  border-top: 2px solid $color-brand;
+  border-radius: 2px;
+
+  .home-featured-heading {
+    text-align: center;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+  }
+
+  .featured-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  }
+}
+
+.home-all-sneakers,
+.home-about {
   background-color: $color-white;
   padding: 40px 20px;
   margin: 20px auto;
@@ -40,13 +76,4 @@
       margin-left: 20px;
     }
   }
-}
-
-.hero-banner {
-  background-size: cover;
-  height: 700px;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  min-width: 100%;
 }
