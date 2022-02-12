@@ -9,7 +9,6 @@ body {
   width: 100%;
   height: 100%;
   font-family: $font-primary;
-  background-color: $color-background;
   display: flex;
   flex-direction: column;
 }
@@ -30,4 +29,38 @@ a {
 
 img {
   width: 100%;
+}
+
+.message {
+  border: 1px solid $color-background;
+  padding: 20px;
+  margin: 20px;
+}
+
+.message.error {
+  border-color: $color-error;
+  color: $color-error;
+}
+
+.message.success {
+  border-color: $color-sucess;
+  color: $color-sucess;
+}
+
+.loader {
+  border: 8px outset #c84774;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  animation: spin 5s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

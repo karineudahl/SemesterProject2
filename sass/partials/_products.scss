@@ -1,16 +1,20 @@
 .product-page-container {
-  @media (min-width: $computer-min-width) {
-    max-width: 1500px;
-    margin: 70px auto;
-  }
-
   .product-page-text {
-    margin: 20px;
+    margin: 10px;
   }
 
   .search {
-    @extend input;
+    height: 40px;
+    font-size: 0.8em;
     width: 250px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: $color-background;
+    border: none;
+
+    @media (min-width: $tablet-min-width) {
+      width: 400px;
+    }
   }
 
   .product-container {
@@ -24,6 +28,11 @@
     @media (min-width: $computer-min-width) {
       grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     }
+  }
+
+  @media (min-width: $computer-min-width) {
+    max-width: 1500px;
+    margin: 70px auto;
   }
 }
 

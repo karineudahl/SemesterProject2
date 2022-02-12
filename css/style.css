@@ -95,7 +95,6 @@ body {
   width: 100%;
   height: 100%;
   font-family: "IBM Plex Sans Thai Looped", sans-serif;
-  background-color: #e5e5e3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,6 +122,54 @@ a {
 
 img {
   width: 100%;
+}
+
+.message {
+  border: 1px solid #e5e5e3;
+  padding: 20px;
+  margin: 20px;
+}
+
+.message.error {
+  border-color: #d82617;
+  color: #d82617;
+}
+
+.message.success {
+  border-color: #238b3f;
+  color: #238b3f;
+}
+
+.loader {
+  border: 8px outset #c84774;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 5s linear infinite;
+          animation: spin 5s linear infinite;
+  margin: auto;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .menu {
@@ -241,10 +288,8 @@ footer {
   position: relative;
 }
 
-.login-form input, .login-form .product-page-container .search, .product-page-container .login-form .search,
-.add-edit-delete-form input,
-.add-edit-delete-form .product-page-container .search,
-.product-page-container .add-edit-delete-form .search {
+.login-form input,
+.add-edit-delete-form input {
   height: 60px;
   width: 100%;
   font-size: 1.2em;
@@ -425,19 +470,24 @@ footer {
   }
 }
 
-@media (min-width: 900px) {
-  .product-page-container {
-    max-width: 1500px;
-    margin: 70px auto;
-  }
-}
-
 .product-page-container .product-page-text {
-  margin: 20px;
+  margin: 10px;
 }
 
 .product-page-container .search {
+  height: 40px;
+  font-size: 0.8em;
   width: 250px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #e5e5e3;
+  border: none;
+}
+
+@media (min-width: 650px) {
+  .product-page-container .search {
+    width: 400px;
+  }
 }
 
 .product-page-container .product-container {
@@ -458,6 +508,13 @@ footer {
   .product-page-container .product-container {
     -ms-grid-columns: (minmax(25%, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .product-page-container {
+    max-width: 1500px;
+    margin: 70px auto;
   }
 }
 
@@ -523,6 +580,14 @@ footer {
     width: 500px;
     height: 500px;
   }
+}
+
+.remove-from-cart {
+  background-color: pink;
+}
+
+.add-to-cart {
+  background-color: green;
 }
 
 .cart-container {

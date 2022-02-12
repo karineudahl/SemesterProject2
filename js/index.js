@@ -1,6 +1,7 @@
 import createMenu from "./ui/createMenu.js";
 import { homeBanner } from "./ui/homeBanner.js";
 import { productUrl  } from "./settings/api.js";
+import { displayMessage } from "./ui/displayMessage.js";
 
 homeBanner();
 createMenu();
@@ -25,9 +26,8 @@ async function getProducts() {
         }
     }
 
-    catch {
-        console.log(error)
-        featuredContainer.innerHTML = "An error has occured"
+    catch(error) {
+        displayMessage("error", "An error has occoured", ".featured-container"); 
     }
 }
 

@@ -1,6 +1,7 @@
 import { productUrl  } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import { searchBar } from "./ui/searchBar.js";
+import { displayMessage } from "./ui/displayMessage.js";
 
 createMenu();
 
@@ -15,9 +16,8 @@ async function getProducts() {
         searchBar(products); 
     }
 
-    catch {
-        console.log(error)
-        containerShoes.innerHTML = "An error has occured"
+    catch(error) {
+        displayMessage("error", "An error has occoured", ".product-container"); 
     }
 }
 
@@ -25,6 +25,7 @@ getProducts();
 
 
 export function showAllShoes(products) {
+    containerShoes.innerHTML = ""; 
     products.forEach(function(product) {
         containerShoes.innerHTML += `<div class="product-content">
                                      <a href="products-details.html?id=${product.id}">

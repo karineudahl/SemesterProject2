@@ -1,4 +1,5 @@
 import { heroBannerUrl  } from "../settings/api.js";
+import { displayMessage } from "./displayMessage.js";
 
 export async function homeBanner() {
     const heroBannerContainer = document.querySelector(".hero-banner-container");
@@ -12,8 +13,7 @@ export async function homeBanner() {
                                         </div>` 
     }
 
-    catch {
-        console.log(error)
-        heroBannerContainer.innerHTML = "An error has occured"
+    catch(error) {
+        displayMessage("error", "An error has occoured", ".hero-banner-container"); 
     }
 }
