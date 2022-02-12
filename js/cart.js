@@ -56,10 +56,6 @@ function removeFromList(event) {
                 saveToStorage(cartCounter, numberInCart - 1);
                 cartCount.innerHTML = numberInCart - 1;
             } 
-            // else {
-            //     saveToStorage(cartCounter, 1);
-            //     cartCount.innerHTML = numberInCart = 1;
-            // } 
             
             break;
         };

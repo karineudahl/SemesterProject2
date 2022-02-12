@@ -290,13 +290,21 @@ footer {
 
 .login-form input,
 .add-edit-delete-form input {
-  height: 60px;
+  height: 45px;
   width: 100%;
-  font-size: 1.2em;
+  font-size: 1em;
   border-radius: 5px;
   background-color: #cbcbcb;
   border: none;
   margin-bottom: 40px;
+}
+
+@media (min-width: 650px) {
+  .login-form input,
+  .add-edit-delete-form input {
+    height: 60px;
+    font-size: 1.2em;
+  }
 }
 
 .login-form label,
@@ -318,6 +326,11 @@ footer {
 
 .about-container .about-content {
   margin: 30px;
+}
+
+.about-container ul {
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 
 .about-container li {
@@ -560,14 +573,9 @@ footer {
 }
 
 @media (min-width: 650px) {
-  .detail-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .detail-container img {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
   }
 }
 
@@ -575,6 +583,9 @@ footer {
   .detail-container {
     max-width: 1000px;
     margin: 70px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .detail-container img {
     width: 500px;
