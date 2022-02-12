@@ -26,7 +26,10 @@
 
   h1 {
     text-transform: uppercase;
-    font-size: 4em;
+
+    @media (min-width: $tablet-min-width) {
+      font-size: 4em;
+    }
   }
 
   .featured-container {

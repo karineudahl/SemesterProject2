@@ -328,7 +328,12 @@ footer {
 
 .home-featured h1 {
   text-transform: uppercase;
-  font-size: 4em;
+}
+
+@media (min-width: 650px) {
+  .home-featured h1 {
+    font-size: 4em;
+  }
 }
 
 .home-featured .featured-container {
