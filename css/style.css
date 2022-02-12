@@ -333,7 +333,7 @@ footer {
 
 .home-featured h1 {
   text-transform: uppercase;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 
 @media (min-width: 650px) {
@@ -345,14 +345,23 @@ footer {
 .home-featured .featured-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(33%, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+
+@media (min-width: 900px) {
+  .home-featured .featured-container {
+    -ms-grid-columns: (minmax(25%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  }
 }
 
 @media (min-width: 900px) {
   .home-featured {
     margin: -110px auto 100px auto;
     max-width: 1300px;
+    -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   }
 }
 

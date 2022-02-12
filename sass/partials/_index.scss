@@ -30,7 +30,7 @@
 
   h1 {
     text-transform: uppercase;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 
     @media (min-width: $tablet-min-width) {
       font-size: 4em;
@@ -39,12 +39,17 @@
 
   .featured-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+
+    @media (min-width: $computer-min-width) {
+      grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    }
   }
 
   @media (min-width: $computer-min-width) {
     margin: -110px auto 100px auto;
     max-width: 1300px;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   }
 }
 
