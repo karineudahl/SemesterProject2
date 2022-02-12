@@ -4,8 +4,13 @@
     margin: 70px auto;
   }
 
+  .product-page-text {
+    margin: 20px;
+  }
+
   .search {
     @extend input;
+    width: 250px;
   }
 
   .product-container {

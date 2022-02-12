@@ -319,7 +319,7 @@ footer {
 
 .home-featured {
   background-color: #f2f2f2;
-  padding: 10px 20px;
+  padding: 10px 20px 60px 20px;
   margin: -110px 20px 100px 20px;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
@@ -430,6 +430,14 @@ footer {
     max-width: 1500px;
     margin: 70px auto;
   }
+}
+
+.product-page-container .product-page-text {
+  margin: 20px;
+}
+
+.product-page-container .search {
+  width: 250px;
 }
 
 .product-page-container .product-container {
