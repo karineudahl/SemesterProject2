@@ -7,6 +7,10 @@
   border-radius: 5px;
   box-shadow: 6px 6px 6px $color-input-fields;
 
+  @media (max-width: $mobile-width) {
+    padding: 30px 20px 50px 20px;
+  }
+
   .form-content {
     position: relative;
   }
@@ -30,6 +34,12 @@
     position: absolute;
     top: 0px;
     left: 5px;
+  }
+
+  .btn {
+    @media (max-width: $mobile-width) {
+      height: 45px;
+    }
   }
 }
 

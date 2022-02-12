@@ -283,6 +283,13 @@ footer {
           box-shadow: 6px 6px 6px #cbcbcb;
 }
 
+@media (max-width: 649px) {
+  .login-form,
+  .add-edit-delete-form {
+    padding: 30px 20px 50px 20px;
+  }
+}
+
 .login-form .form-content,
 .add-edit-delete-form .form-content {
   position: relative;
@@ -312,6 +319,13 @@ footer {
   position: absolute;
   top: 0px;
   left: 5px;
+}
+
+@media (max-width: 649px) {
+  .login-form .btn,
+  .add-edit-delete-form .btn {
+    height: 45px;
+  }
 }
 
 .search {
