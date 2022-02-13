@@ -1,3 +1,5 @@
+import { tokenKey, userKey } from "../settings/variables.js";
+
 export function saveToStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value)); 
 }
@@ -12,11 +14,22 @@ export function getFromStorage(key) {
     return JSON.parse(value); 
 }
 
+// for å få username i menyen, så denne er call'et i createMenu
+export function getUsername() {
+    const user = getFromStorage(userKey); 
+
+    if(user) {
+        return user.username; 
+    }
+
+    return null; 
+}
+
 
 
 // KAn vi ikke bare bruke saveToStorage og getFromStorage, jeg prøver det. også har jeg lagt inn tokenKey og userKey i variables.ks
-const tokenKey = "token"; 
-const userKey = "user"; 
+// const tokenKey = "token"; 
+// const userKey = "user"; 
 
 
 export function saveToken(token) {

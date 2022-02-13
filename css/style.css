@@ -191,6 +191,10 @@ img {
   text-transform: uppercase;
 }
 
+.menu a.active {
+  background-color: #d85c17;
+}
+
 .menu .logo {
   font-family: "Righteous", cursive;
   font-size: 1.1em;

@@ -65,15 +65,3 @@ async function loggedIn(username, password) {
         console.log(error)
     }
 }
-
-
-//denne funksjonen har jeg ikke funnet ut hvor han har callet - den er fra saving logged in data
-function getUsername() {
-    const user = getFromStorage(userKey); 
-
-    if(user) {
-        return user.username; 
-    }
-
-    return null; 
-}
