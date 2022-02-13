@@ -1,10 +1,10 @@
-
-
 import { showAllShoes } from "../products.js";
 
 export function searchBar(products) {
     const containerShoes = document.querySelector(".product-container"); 
     const searchBar = document.querySelector("#search"); 
+
+    const noProduct = document.querySelector(".no-products")
 
     searchBar.onkeyup = function() {
         const searchValue = event.target.value.trim().toLowerCase();
@@ -17,6 +17,10 @@ export function searchBar(products) {
             
         
         });
+
+        if(products.length === 0) {
+            noProduct.innerHTML = "Nothing"
+        }
         
         containerShoes.innerHTML = ""; 
         showAllShoes(filteredSearch);

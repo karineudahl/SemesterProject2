@@ -1,8 +1,12 @@
 .cart-container {
   background-color: $color-white;
   padding: 20px;
-  max-width: 600px;
-  margin: 60px auto;
+  margin: 50px 20px;
+
+  @media (min-width: $tablet-min-width) {
+    max-width: 600px;
+    margin: 60px auto;
+  }
 
   .no-products-content {
     text-align: center;
@@ -26,6 +30,11 @@
     align-items: center;
     border-top: 1px solid $color-input-fields;
     justify-content: flex-end;
+  }
+
+  .fa-times:hover {
+    transform: scale(1.1);
+    cursor: pointer;
   }
 
   p {

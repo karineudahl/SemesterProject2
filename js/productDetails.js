@@ -64,6 +64,7 @@ async function detailsProduct() {
 
                 saveToStorage(cartCounter, numberInCart + 1);
                 cartCount.innerHTML = numberInCart + 1;
+
             }
             else {
                 const newFavs = currentFavs.filter((fav) => fav.id !== id );
@@ -71,6 +72,7 @@ async function detailsProduct() {
 
                 saveToStorage(cartCounter, numberInCart - 1);
                 cartCount.innerHTML = numberInCart - 1;
+
             }
         }
     }

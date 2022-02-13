@@ -274,19 +274,20 @@ footer {
 
 .login-form,
 .add-edit-delete-form {
-  max-width: 400px;
-  margin: 70px auto;
+  margin: 50px 20px;
   background-color: #f2f2f2;
-  padding: 40px 50px 70px 50px;
+  padding: 30px 20px 50px 20px;
   border-radius: 5px;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
 }
 
-@media (max-width: 649px) {
+@media (min-width: 650px) {
   .login-form,
   .add-edit-delete-form {
-    padding: 30px 20px 50px 20px;
+    padding: 40px 50px 70px 50px;
+    max-width: 400px;
+    margin: 70px auto;
   }
 }
 
@@ -618,8 +619,14 @@ footer {
 .cart-container {
   background-color: #f2f2f2;
   padding: 20px;
-  max-width: 600px;
-  margin: 60px auto;
+  margin: 50px 20px;
+}
+
+@media (min-width: 650px) {
+  .cart-container {
+    max-width: 600px;
+    margin: 60px auto;
+  }
 }
 
 .cart-container .no-products-content {
@@ -658,6 +665,12 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.cart-container .fa-times:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
 }
 
 .cart-container p {

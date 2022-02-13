@@ -11,3 +11,22 @@ export function getFromStorage(key) {
 
     return JSON.parse(value); 
 }
+
+
+
+// KAn vi ikke bare bruke saveToStorage og getFromStorage, jeg prøver det. også har jeg lagt inn tokenKey og userKey i variables.ks
+const tokenKey = "token"; 
+const userKey = "user"; 
+
+
+export function saveToken(token) {
+    saveToStorage(tokenKey, token); 
+}
+
+export function getToken() {
+    return getFromStorage(tokenKey); 
+}
+
+export function saveUser(user) {
+    saveToStorage(userKey, user);
+}
