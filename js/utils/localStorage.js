@@ -1,4 +1,4 @@
-import { tokenKey, userKey } from "../settings/variables.js";
+import { userKey } from "../settings/variables.js";
 
 export function saveToStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value)); 
@@ -32,14 +32,14 @@ export function getUsername() {
 // const userKey = "user"; 
 
 
-export function saveToken(token) {
-    saveToStorage(tokenKey, token); 
-}
+// export function saveToken(token) {
+//     saveToStorage(tokenKey, token); 
+// }
 
-export function getToken() {
-    return getFromStorage(tokenKey); 
-}
+// export function getToken() {
+//     return getFromStorage(tokenKey); 
+// }
 
-export function saveUser(user) {
-    saveToStorage(userKey, user);
-}
+// export function saveUser(user) {
+//     saveToStorage(userKey, user);
+// }
