@@ -28,11 +28,12 @@ export function showAllShoes(products) {
     containerShoes.innerHTML = ""; 
     products.forEach(function(product) {
         containerShoes.innerHTML += `<div class="product-content">
-                                     <a href="products-details.html?id=${product.id}">
-                                         <img src="${product.image.formats.large.url}" alt="${product.title}">  
+                                     <a href="products-details.html?id=${product.id}">                                          
                                          <h2>${product.title}<h2>
                                          <p>kr. ${product.price}<p> 
                                      </a>
                                  </div>` 
     }); 
 }
+
+{/* <img src="${product.image.formats.large.url}" alt="${product.title}"></img> */}

@@ -23,23 +23,27 @@
         <main>
             <form id="form" class="add-edit-delete-form" action="submit.php" method="POST">
                 <h1>Add, edit or delete product</h1>
+                
+                <div class="message-container"></div>
+
                 <div class="form-content">
-                    <input type="text" id="name">
-                    <label for="name">Product title</label>         
+                    <input type="text" id="title" />
+                    <label for="title">Product title</label>         
                 </div>
     
                 <div class="form-content">   
-                    <input type="text" id="email">
-                    <label for="email">Product price</label>
+                    <input type="text" id="price" />
+                    <label for="price">Product price</label>
                 </div>
                 <div class="form-content">   
-                    <input type="text" id="email">
-                    <label for="email">Product Description</label>
+                    <textarea id="description"></textarea>
+                    <label for="description">Product Description</label>
                 </div>
 
-                <button class="btn login-add">Add</button>
-                <button class="btn orange">Edit</button>
-                <button class="btn delete">Delete</button>
+                <button type="submit" id="btn-add">Add</button>
+                <!-- <button class="btn login-add" id="btn-add">Add</button> -->
+                <!-- <button class="btn orange">Edit</button>
+                <button class="btn delete">Delete</button> -->
             </form>  
         </main>
     
@@ -65,7 +69,7 @@
             </div>  
     </footer>
 
-    <script src="js/index.js" type="module"></script>
+    <script src="js/changeProduct.js" type="module"></script>
 
 </body>
 </html>

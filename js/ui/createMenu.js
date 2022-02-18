@@ -12,11 +12,15 @@ export default function createMenu() {
     let authLink = `<li><a href="login.html" class="${pathname === "/login.html" ? "active" : ""}"><i class="fas fa-user"></i></a></li>`;
     
 
+    // if(username) {
+    //     authLink = `<span>Logged in as ${username}</span>`; 
+
+    // }
     if(username) {
-        authLink = `<span>Logged in as ${username}</span>`; 
+        authLink = `<a href="change-product.html" class="${pathname === "/change-product.html" ? "active" : ""}">Add</a>
+                        <span>Logged in as ${username}</span>`; 
 
     }
-    
 
     container.innerHTML =   `<nav class="menu">
                                 <div> 
