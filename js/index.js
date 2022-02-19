@@ -17,7 +17,7 @@ async function getProducts() {
             if(products[i].featured === true) {
                 featuredContainer.innerHTML += `<div class="product-content">
                                                     <a href="products-details.html?id=${products[i].id}">
-                                                        <img src="${products[i].image.formats.large.url}" alt="${products[i].title}">  
+                                                         
                                                         <h2>${products[i].title}<h2>
                                                         <p>kr. ${products[i].price}<p> 
                                                     </a>
@@ -32,3 +32,5 @@ async function getProducts() {
 }
 
 getProducts();
+
+{/* <img src="${products[i].image.formats.large.url}" alt="${products[i].title}">  */}

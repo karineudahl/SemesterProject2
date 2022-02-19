@@ -14,7 +14,10 @@ export function getFromStorage(key) {
     return JSON.parse(value); 
 }
 
-// for å få username i menyen, så denne er call'et i createMenu
+export function deleteItemFromStorage(key) {
+    localStorage.removeItem(key)
+}
+
 export function getUsername() {
     const user = getFromStorage(userKey); 
 

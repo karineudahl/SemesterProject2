@@ -175,6 +175,9 @@ img {
 .menu {
   background-color: #121212;
   padding: 10px 10px;
+}
+
+.menu .menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,9 +189,24 @@ img {
           align-items: center;
 }
 
+.menu .menu-logout-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .menu a {
   color: #f2f2f2;
   text-transform: uppercase;
+}
+
+.menu .btn-logout {
+  height: 30px;
+  font-size: 0.8em;
+  margin-bottom: 15px;
 }
 
 .menu a.active {
@@ -205,7 +223,7 @@ img {
 }
 
 .menu li a {
-  padding: 3px;
+  padding: 2px;
   font-size: 0.9em;
 }
 
@@ -219,7 +237,8 @@ img {
 }
 
 .menu li {
-  margin: 5px;
+  list-style-type: none;
+  margin: 4px;
 }
 
 .menu li a:hover {
@@ -233,9 +252,10 @@ img {
 .menu .cart-count {
   background-color: #d85c17;
   border-radius: 100%;
-  padding: 1px 5px;
+  width: 100%;
   font-size: 0.9em;
   position: absolute;
+  text-align: center;
   top: -7px;
 }
 
@@ -345,6 +365,11 @@ footer {
   background-color: #cbcbcb;
   border: none;
   margin-bottom: 40px;
+}
+
+.form-error {
+  color: red;
+  display: none;
 }
 
 .about-container .about-content {

@@ -1,13 +1,27 @@
 .menu {
   background-color: $color-header-footer;
   padding: 10px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-logout-button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
 
   a {
     color: $color-white;
     text-transform: uppercase;
+  }
+
+  .btn-logout {
+    height: 30px;
+    font-size: 0.8em;
+    margin-bottom: 15px;
   }
 
   a.active {
@@ -24,7 +38,7 @@
   }
 
   li a {
-    padding: 3px;
+    padding: 2px;
     font-size: 0.9em;
   }
 
@@ -35,7 +49,8 @@
   }
 
   li {
-    margin: 5px;
+    list-style-type: none;
+    margin: 4px;
   }
 
   li a:hover {
@@ -49,9 +64,10 @@
   .cart-count {
     background-color: $color-brand;
     border-radius: 100%;
-    padding: 1px 5px;
+    width: 100%;
     font-size: 0.9em;
     position: absolute;
+    text-align: center;
     top: -7px;
   }
 
