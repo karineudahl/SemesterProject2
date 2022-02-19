@@ -23,7 +23,8 @@ export default function createMenu() {
     container.innerHTML =   `<nav class="menu">
                                 <div class="menu-container"> 
                                     <div> 
-                                        <a href="/" class="logo">Sneakers<i class="fas fa-circle"></i></a>
+                                        <a href="/" class="logo">Sneakers</a>
+                                        <i class="fas fa-circle"></i>
                                     </div>        
                                     <ul>
                                         <li><a href="products.html" class="${pathname === "/products.html" ? "active" : ""}">Shoes</a></li> 
