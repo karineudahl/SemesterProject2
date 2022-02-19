@@ -316,11 +316,6 @@ footer {
   }
 }
 
-.login-form .form-content,
-.add-edit-delete-form .form-content {
-  position: relative;
-}
-
 .login-form input,
 .login-form textarea,
 .add-edit-delete-form input,
@@ -331,7 +326,7 @@ footer {
   border-radius: 5px;
   background-color: #cbcbcb;
   border: none;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 650px) {
@@ -344,11 +339,20 @@ footer {
   }
 }
 
-.login-form label,
-.add-edit-delete-form label {
-  position: absolute;
-  top: 0px;
-  left: 5px;
+.login-form .upload-image,
+.add-edit-delete-form .upload-image {
+  background-color: #f2f2f2;
+}
+
+.login-form input::-webkit-file-upload-button,
+.add-edit-delete-form input::-webkit-file-upload-button {
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #121212;
+  cursor: pointer;
+  margin: 10px 10px 15px 0px;
+  -webkit-box-shadow: 4px 4px 4px #cbcbcb;
+          box-shadow: 4px 4px 4px #cbcbcb;
 }
 
 @media (max-width: 649px) {

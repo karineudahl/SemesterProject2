@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sneakers | Home</title>
+    <title>Sneakers | Login</title>
     <meta charset="UTF-8">
     <meta name="description" content="get the best taco recipes, show the lastest recipes, all recipes and get inspiration to make good mexian food">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,13 +27,15 @@
                 <div class="message-container"></div>
 
                 <div class="form-content">
-                    <input type="text" id="username">
-                    <label for="username">Username *</label>         
+                    <label for="username">Username *</label>
+                    <input type="text" id="username">                 
+                    <div class="form-error" id="usernameError">Username over five characters</div>         
                 </div>
     
                 <div class="form-content">   
-                    <input type="text" id="password">
                     <label for="password">Password *</label>
+                    <input type="password" id="password">           
+                    <div class="form-error" id="passwordError">Username over six characters</div>
                 </div>
 
                 <button class="btn login-add">Login</button>

@@ -12,10 +12,6 @@
     margin: 70px auto;
   }
 
-  .form-content {
-    position: relative;
-  }
-
   input,
   textarea {
     height: 45px;
@@ -24,7 +20,7 @@
     border-radius: 5px;
     background-color: $color-input-fields;
     border: none;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     @media (min-width: $tablet-min-width) {
       height: 60px;
@@ -32,10 +28,21 @@
     }
   }
 
-  label {
-    position: absolute;
-    top: 0px;
-    left: 5px;
+  // .form-image-upload-container {
+  //   margin: 10px;
+  // }
+
+  .upload-image {
+    background-color: $color-white;
+  }
+
+  input::-webkit-file-upload-button {
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid $color-header-footer;
+    cursor: pointer;
+    margin: 10px 10px 15px 0px;
+    box-shadow: 4px 4px 4px $color-input-fields;
   }
 
   .btn {
