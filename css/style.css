@@ -207,6 +207,7 @@ img {
   height: 30px;
   font-size: 0.8em;
   margin-bottom: 15px;
+  color: #121212;
 }
 
 .menu a.active {
@@ -224,7 +225,7 @@ img {
 
 .menu li a {
   padding: 2px;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .menu ul {
