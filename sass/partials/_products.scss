@@ -17,6 +17,10 @@
     }
   }
 
+  .no-products {
+    margin: 10px;
+  }
+
   .product-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));

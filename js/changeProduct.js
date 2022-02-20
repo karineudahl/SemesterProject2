@@ -41,21 +41,22 @@ function validateForm(event) {
         descriptionError.style.display = "block";
     }
 
-    if(checkLength(title.value, 2) && checkLength(price.value, 2) && checkLength(description.value, 5)) {
-        addProduct();
-    }
-}
-
-async function addProduct() {
     const titleValue = title.value.trim(); 
     const priceValue = parseFloat(price.value); 
     const descriptionValue = description.value.trim(); 
-    // const imageValue = images.files[0];
-    
-    const data = JSON.stringify({ title: titleValue, price: priceValue, description: descriptionValue });
+    const imageValue = images.files[0];
+
+    if(checkLength(title.value, 2) && checkLength(price.value, 2) && checkLength(description.value, 5)) {
+        addProduct(titleValue, priceValue, descriptionValue, imageValue);
+    }
+}
+
+async function addProduct(title, price, description, image ) {
+    const data = JSON.stringify({ title: title, price: price, description: description, image: image });
     const token = getFromStorage(tokenKey);
 
-    console.log(data)
+    console.log(data); 
+
 
     const options = {
         method: "POST",
