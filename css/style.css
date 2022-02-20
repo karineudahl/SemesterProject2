@@ -93,14 +93,6 @@ p {
   color: #d82617;
 }
 
-.cta {
-  background-color: green;
-}
-
-.abc {
-  background-color: red;
-}
-
 html,
 body {
   height: 100%;
@@ -692,6 +684,7 @@ footer {
 
 .cart-container .no-products-content {
   text-align: center;
+  padding: 30px 0px 80px 0px;
 }
 
 .cart-container .cart-content {

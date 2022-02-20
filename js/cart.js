@@ -37,6 +37,7 @@ productsInCart.forEach((cartElement) => {
 }); 
 
 if(productsInCart.length === 0) {
+    totalContainer.remove(); 
     nothingInCart.innerHTML =   `<div class="no-products-content">
                                     <p>No items in shoppingbag.</p>
                                     <a href="products.html">Go shopping</a>
