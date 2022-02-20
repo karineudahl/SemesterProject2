@@ -13,6 +13,8 @@ async function getProducts() {
         const response = await fetch(productUrl); 
         const products = await response.json(); 
         
+        featuredContainer.innerHTML = ""; 
+
         for (var i = 0; i < products.length; i++) {
             if(products[i].featured === true) {
                 featuredContainer.innerHTML += `<div class="product-content">

@@ -7,7 +7,7 @@ export async function homeBanner() {
     try {
         const response = await fetch(heroBannerUrl); 
         const products = await response.json(); 
-   
+
         heroBannerContainer.innerHTML = `<div>
                                             <div style="background-image: url(${products.hero_banner.formats.medium.url})" class="hero-banner"></div> 
                                         </div>` 
@@ -16,4 +16,4 @@ export async function homeBanner() {
     catch(error) {
         displayMessage("error", "An error has occoured", ".hero-banner-container"); 
     }
-}
+} 

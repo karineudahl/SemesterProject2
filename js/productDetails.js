@@ -13,6 +13,7 @@ const url = productUrl + id;
 
 const detailsContainer = document.querySelector(".product-details-container");
 const cartCount = document.querySelector(".cart-count");
+const whereAmI = document.querySelector("#where-am-i-products-details"); 
 
 async function detailsProduct() {
     try {
@@ -20,6 +21,9 @@ async function detailsProduct() {
         const details = await response.json(); 
 
         const image = details.image.formats.large.url;
+
+        whereAmI.innerHTML = `<i class="fas fa-chevron-right"></i>${details.title}`;
+        document.title += `${details.title}`;
 
         detailsContainer.innerHTML =    `<div class="detail-container">
                                             <div class="detail-img-container">                                    

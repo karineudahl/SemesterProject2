@@ -32,28 +32,28 @@ img {
 }
 
 .message {
-  border: 1px solid $color-background;
-  padding: 20px;
-  margin: 20px;
+  color: $color-white;
+  padding: 15px;
+  margin: 10px 0px 20px 0px;
+  border-radius: 5px;
 }
 
 .message.error {
-  border-color: $color-error;
-  color: $color-error;
+  background-color: $color-error;
 }
 
 .message.success {
-  border-color: $color-sucess;
-  color: $color-sucess;
+  background-color: $color-sucess;
 }
 
 .loader {
-  border: 8px outset #c84774;
+  border: 16px solid $color-brand;
+  border-top: 16px solid $color-input-fields;
   border-radius: 100%;
-  width: 60px;
-  height: 60px;
-  animation: spin 5s linear infinite;
-  margin: auto;
+  width: 80px;
+  height: 80px;
+  animation: spin 8s linear infinite;
+  margin: 70px auto;
 }
 
 @keyframes spin {
@@ -63,4 +63,18 @@ img {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.where-am-i-container {
+  margin: 20px 0px 20px 0px;
+}
+
+.where-am-i-container li,
+.fa-chevron-right {
+  display: inline;
+  padding-right: 10px;
+}
+
+.where-am-i-now {
+  color: darken($color: $color-input-fields, $amount: 30);
 }

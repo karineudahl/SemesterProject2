@@ -28,9 +28,10 @@
     }
   }
 
-  // .form-image-upload-container {
-  //   margin: 10px;
-  // }
+  .form-error {
+    color: red;
+    display: none;
+  }
 
   .upload-image {
     background-color: $color-white;
@@ -52,17 +53,12 @@
   }
 }
 
-.search {
-  height: 60px;
-  width: 100%;
-  font-size: 1.2em;
-  border-radius: 5px;
-  background-color: $color-input-fields;
-  border: none;
-  margin-bottom: 40px;
-}
-
-.form-error {
-  color: red;
-  display: none;
-}
+// .search {
+//   height: 60px;
+//   width: 100%;
+//   font-size: 1.2em;
+//   border-radius: 5px;
+//   background-color: $color-input-fields;
+//   border: none;
+//   margin-bottom: 40px;
+// }

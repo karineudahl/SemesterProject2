@@ -20,9 +20,16 @@
 
   .btn-logout {
     height: 30px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-bottom: 15px;
     color: $color-header-footer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px lighten($color: $color-header-footer, $amount: 40);
+
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 
   a.active {
@@ -41,6 +48,10 @@
   li a {
     padding: 2px;
     font-size: 1em;
+
+    &:hover {
+      background: lighten($color-brand, 5%);
+    }
   }
 
   ul {
@@ -52,10 +63,6 @@
   li {
     list-style-type: none;
     margin: 4px;
-  }
-
-  li a:hover {
-    background: lighten($color-brand, 5%);
   }
 
   .fa-shopping-bag {

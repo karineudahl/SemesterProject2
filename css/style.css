@@ -125,29 +125,29 @@ img {
 }
 
 .message {
-  border: 1px solid #e5e5e3;
-  padding: 20px;
-  margin: 20px;
+  color: #f2f2f2;
+  padding: 15px;
+  margin: 10px 0px 20px 0px;
+  border-radius: 5px;
 }
 
 .message.error {
-  border-color: #d82617;
-  color: #d82617;
+  background-color: #d82617;
 }
 
 .message.success {
-  border-color: #238b3f;
-  color: #238b3f;
+  background-color: #238b3f;
 }
 
 .loader {
-  border: 8px outset #c84774;
+  border: 16px solid #d85c17;
+  border-top: 16px solid #cbcbcb;
   border-radius: 100%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: spin 5s linear infinite;
-          animation: spin 5s linear infinite;
-  margin: auto;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 8s linear infinite;
+          animation: spin 8s linear infinite;
+  margin: 70px auto;
 }
 
 @-webkit-keyframes spin {
@@ -170,6 +170,20 @@ img {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.where-am-i-container {
+  margin: 20px 0px 20px 0px;
+}
+
+.where-am-i-container li,
+.fa-chevron-right {
+  display: inline;
+  padding-right: 10px;
+}
+
+.where-am-i-now {
+  color: #7f7f7f;
 }
 
 .menu {
@@ -205,9 +219,18 @@ img {
 
 .menu .btn-logout {
   height: 30px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin-bottom: 15px;
   color: #121212;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 2px #787878;
+          box-shadow: 2px 2px 2px #787878;
+}
+
+.menu .btn-logout:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .menu a.active {
@@ -228,6 +251,10 @@ img {
   font-size: 1em;
 }
 
+.menu li a:hover {
+  background: #e76821;
+}
+
 .menu ul {
   list-style: none;
   display: -webkit-box;
@@ -240,10 +267,6 @@ img {
 .menu li {
   list-style-type: none;
   margin: 4px;
-}
-
-.menu li a:hover {
-  background: #e76821;
 }
 
 .menu .fa-shopping-bag {
@@ -339,6 +362,12 @@ footer {
   }
 }
 
+.login-form .form-error,
+.add-edit-delete-form .form-error {
+  color: red;
+  display: none;
+}
+
 .login-form .upload-image,
 .add-edit-delete-form .upload-image {
   background-color: #f2f2f2;
@@ -360,21 +389,6 @@ footer {
   .add-edit-delete-form .btn {
     height: 45px;
   }
-}
-
-.search {
-  height: 60px;
-  width: 100%;
-  font-size: 1.2em;
-  border-radius: 5px;
-  background-color: #cbcbcb;
-  border: none;
-  margin-bottom: 40px;
-}
-
-.form-error {
-  color: red;
-  display: none;
 }
 
 .about-container .about-content {
