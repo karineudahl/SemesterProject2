@@ -66,14 +66,16 @@ async function detailsProduct() {
                 saveToStorage(cartList, currentShoes);
 
                 saveToStorage(cartCounter, numberInCart + 1);
-                cartCount.innerHTML = numberInCart + 1;                    
+                cartCount.innerHTML = numberInCart + 1;   
+
             }
             else {
                 const newFavs = currentShoes.filter((shoe) => shoe.id !== id );
                 saveToStorage(cartList, newFavs); 
 
                 saveToStorage(cartCounter, numberInCart - 1);
-                cartCount.innerHTML = numberInCart - 1;              
+                cartCount.innerHTML = numberInCart - 1;          
+  
             }
         }          
     }
@@ -84,7 +86,6 @@ async function detailsProduct() {
 }
 
 detailsProduct();
-
 
 
 
