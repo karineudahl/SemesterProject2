@@ -42,7 +42,8 @@ p {
   font-size: 1em;
 }
 
-.btn {
+.btn,
+.cta {
   height: 60px;
   width: 100%;
   font-size: 1.2em;
@@ -54,34 +55,50 @@ p {
           box-shadow: 4px 4px 4px #cbcbcb;
 }
 
-.btn.orange, .btn.cta-add-to-cart {
+.btn.orange,
+.cta.orange {
   background-color: #d85c17;
   border: #d85c17 1px solid;
 }
 
-.btn.orange:hover, .btn.cta-add-to-cart:hover {
+.btn.orange:hover,
+.cta.orange:hover {
   background-color: #f2f2f2;
   color: #d85c17;
 }
 
-.btn.login-add {
+.btn.login-add, .btn.add-to-cart,
+.cta.login-add,
+.cta.add-to-cart {
   background-color: #238b3f;
   border: #238b3f 1px solid;
 }
 
-.btn.login-add:hover {
+.btn.login-add:hover, .btn.add-to-cart:hover,
+.cta.login-add:hover,
+.cta.add-to-cart:hover {
   background-color: #f2f2f2;
   color: #238b3f;
 }
 
-.btn.delete {
+.btn.delete,
+.cta.delete {
   background-color: #d82617;
   border: #d82617 1px solid;
 }
 
-.btn.delete:hover {
+.btn.delete:hover,
+.cta.delete:hover {
   background-color: #f2f2f2;
   color: #d82617;
+}
+
+.cta {
+  background-color: green;
+}
+
+.abc {
+  background-color: red;
 }
 
 html,
@@ -658,14 +675,6 @@ footer {
     width: 500px;
     height: 500px;
   }
-}
-
-.remove-from-cart {
-  background-color: pink;
-}
-
-.add-to-cart {
-  background-color: green;
 }
 
 .cart-container {
