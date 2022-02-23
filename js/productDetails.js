@@ -1,6 +1,6 @@
 import { productUrl  } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
-import { saveToStorage, getFromStorage, deleteItemFromStorage } from "./utils/localStorage.js";
+import { saveToStorage, getFromStorage } from "./utils/localStorage.js";
 import { cartList, cartCounter } from "./settings/variables.js";
 import { displayMessage } from "./ui/displayMessage.js";
 
