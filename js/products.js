@@ -2,10 +2,9 @@ import { productUrl  } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import { searchBar } from "./ui/searchBar.js";
 import { displayMessage } from "./ui/displayMessage.js";
+import { showAllShoes } from "./ui/showAllShoes.js";
 
 createMenu();
-
-const containerShoes = document.querySelector(".product-container"); 
 
 async function getProducts() {
     try {
@@ -22,17 +21,3 @@ async function getProducts() {
 }
 
 getProducts();
-
-
-export function showAllShoes(products) {
-    containerShoes.innerHTML = ""; 
-    products.forEach(function(product) {
-        containerShoes.innerHTML += `<div class="product-content">
-                                     <a href="products-details.html?id=${product.id}"> 
-                                        <img src="${product.image.formats.large.url}" alt="${product.title}"></img>                                         
-                                         <h2>${product.title}<h2>
-                                         <p>kr. ${product.price}<p> 
-                                     </a>
-                                 </div>` 
-    }); 
-};

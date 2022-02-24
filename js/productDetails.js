@@ -28,7 +28,7 @@ async function detailsProduct() {
         // hører sammen
         const shoesInCart = getFromStorage(cartList);
         let cssClass = "add-to-cart"; 
-        const doesObjectExist = shoesInCart.find(function(fav) {
+        const doesObjectExist = shoesInCart.find(function(fav) { 
             return parseInt(fav.id) === details.id;
         })
 

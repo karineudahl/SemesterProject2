@@ -60,7 +60,7 @@ async function loggedIn(username, password) {
         if(json.user) {
             saveToStorage(tokenKey, json.jwt);
             saveToStorage(userKey, json.user);
-            location.href = "/change-product.html"; 
+            location.href = "/add-product.html"; 
         }
 
         if(json.error) {

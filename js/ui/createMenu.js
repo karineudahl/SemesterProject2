@@ -8,11 +8,13 @@ export default function createMenu() {
     const username = getUsername();
 
     let logout = "";
+    let editProduct = `<a href="products.html" class="${pathname === "/products.html" ? "active" : ""}">Shoes</a>`; 
     let addProduct = ""; 
     let notUserName = "";
     
     if(username) { 
-        addProduct = `<a href="change-product.html" class="${pathname === "/change-product.html" ? "active" : ""}">Add</a>`
+        editProduct = `<a href="products.html" class="${pathname === "/products.html" ? "active" : ""}">Edit</a>`
+        addProduct = `<a href="add-product.html" class="${pathname === "/add-product.html" ? "active" : ""}">Add</a>`
         logout = `<button id="logoutButton" class="btn-logout">Logout, ${username}</button>`; 
     }
 
@@ -27,7 +29,7 @@ export default function createMenu() {
                                         <i class="fas fa-circle"></i>
                                     </div>        
                                     <ul>
-                                        <li><a href="products.html" class="${pathname === "/products.html" ? "active" : ""}">Shoes</a></li> 
+                                        <li>${editProduct}</li> 
                                         <li><a href="about.html" class="${pathname === "/about.html" ? "active" : ""}">About</a></li> 
                                         <li>${addProduct}</li>
                                         <li>${notUserName}</li>     

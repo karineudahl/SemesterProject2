@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sneakers | Home</title>
+    <title>Sneakers | Edit and delete products</title>
     <meta charset="UTF-8">
     <meta name="description" content="get the best taco recipes, show the lastest recipes, all recipes and get inspiration to make good mexian food">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,11 +24,12 @@
             <nav class="where-am-i-container">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="change-product.html" class="where-am-i-now"><i class="fas fa-chevron-right"></i>Add, edit or delete products</a></li>
+                    <li><a href="products.html"><i class="fas fa-chevron-right"></i>Shoes</a></li>
+                    <li><a href="edit-delete-product.html" class="where-am-i-now"><i class="fas fa-chevron-right"></i>Edit or delete product</a></li>
                 </ul>
             </nav>
-            <form form action="/api/endpoint" method="POST" id="form" class="add-edit-delete-form">
-                <h1>Add, edit or delete product</h1>
+            <form form action="/api/endpoint" method="POST" id="form" class="edit-delete-form">
+                <h1>Edit or delete product</h1>
                 
                 <div class="message-container"></div>
 
@@ -48,13 +49,18 @@
                     <textarea id="description" name="description"></textarea>                     
                 </div>
                 <div>
+                    <div class="image-container"></div>
                     <label for="file">Upload image</label>
                     <input type="file" class="upload-image" name="image" id="image">
                 </div>
                 <div>
                     <label for="featured">Featured</label>
-                    <input type="checkbox" name="featured" value="true" id="featured">  
+                    <input type="checkbox" name="featured" value="false" id="featured" class="checkbox">  
                 </div>
+
+                <input id="id" />
+                
+                <button class="btn orange">Edit</button>
 
                 <!-- <div class="form-content">
                     <input type="radio" name="featured" value="false" id="featuredFalse">
@@ -65,13 +71,9 @@
                 </div> -->
                     
                 
-                    
- 
-
-                <button type="submit" id="btn-add" class="btn login-add">Add</button>
-                <!-- <button class="btn login-add" id="btn-add">Add</button> -->
-                <!-- <button class="btn orange">Edit</button>
-                <button class="btn delete">Delete</button> -->
+            
+                
+                <!-- <button class="btn delete">Delete</button> -->
             </form>  
         </main>
     
@@ -97,7 +99,7 @@
             </div>  
     </footer>
 
-    <script src="js/changeProduct.js" type="module"></script>
+    <script src="js/editDeleteProduct.js" type="module"></script>
 
 </body>
 </html>

@@ -330,7 +330,8 @@ footer {
 }
 
 .login-form,
-.add-edit-delete-form {
+.add-edit-delete-form,
+.edit-delete-form {
   margin: 50px 20px;
   background-color: #f2f2f2;
   padding: 30px 20px 50px 20px;
@@ -341,7 +342,8 @@ footer {
 
 @media (min-width: 650px) {
   .login-form,
-  .add-edit-delete-form {
+  .add-edit-delete-form,
+  .edit-delete-form {
     padding: 40px 50px 70px 50px;
     max-width: 400px;
     margin: 70px auto;
@@ -351,7 +353,9 @@ footer {
 .login-form input,
 .login-form textarea,
 .add-edit-delete-form input,
-.add-edit-delete-form textarea {
+.add-edit-delete-form textarea,
+.edit-delete-form input,
+.edit-delete-form textarea {
   height: 45px;
   width: 100%;
   font-size: 1em;
@@ -365,25 +369,30 @@ footer {
   .login-form input,
   .login-form textarea,
   .add-edit-delete-form input,
-  .add-edit-delete-form textarea {
+  .add-edit-delete-form textarea,
+  .edit-delete-form input,
+  .edit-delete-form textarea {
     height: 60px;
     font-size: 1.2em;
   }
 }
 
 .login-form .form-error,
-.add-edit-delete-form .form-error {
+.add-edit-delete-form .form-error,
+.edit-delete-form .form-error {
   color: red;
   display: none;
 }
 
 .login-form .upload-image,
-.add-edit-delete-form .upload-image {
+.add-edit-delete-form .upload-image,
+.edit-delete-form .upload-image {
   background-color: #f2f2f2;
 }
 
 .login-form input::-webkit-file-upload-button,
-.add-edit-delete-form input::-webkit-file-upload-button {
+.add-edit-delete-form input::-webkit-file-upload-button,
+.edit-delete-form input::-webkit-file-upload-button {
   height: 45px;
   border-radius: 5px;
   border: 1px solid #121212;
@@ -395,9 +404,14 @@ footer {
 
 @media (max-width: 649px) {
   .login-form .btn,
-  .add-edit-delete-form .btn {
+  .add-edit-delete-form .btn,
+  .edit-delete-form .btn {
     height: 45px;
   }
+}
+
+.edit-delete-form {
+  display: none;
 }
 
 .about-container .about-content {

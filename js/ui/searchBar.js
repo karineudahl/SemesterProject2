@@ -1,4 +1,4 @@
-import { showAllShoes } from "../products.js";
+import { showAllShoes } from "./showAllShoes.js";
 
 export function searchBar(products) {
     const containerShoes = document.querySelector(".product-container"); 
