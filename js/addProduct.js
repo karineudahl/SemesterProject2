@@ -26,7 +26,7 @@ function validateForm(event) {
     if(checkLength(title.value, 2)) {
         titleError.style.display = "none";
     } else {
-        titleError.style.display = "block";
+        titleError.style.display = "block"; 
     }
     
     if(checkLength(price.value, 2)) {
@@ -53,22 +53,32 @@ function validateForm(event) {
 
 async function addProduct() {
     
-    var inputs = document.querySelector(".add-edit-delete-form").elements;
-    // let checkbox = document.querySelector(".checkbox");
-
+    const inputs = document.querySelector(".add-edit-delete-form").elements;
+    let checkbox = document.querySelector('input[type="checkbox"]:checked');
     const body = new FormData();       
     const inputData = {};          
 
-    for(let inputElement of inputs) {
-        if(inputElement.type === "file") {
-            for (let file of inputElement.files) {                            
-            body.append(`files.${inputElement.name}`, file, file.image);               
-            } 
-        }         
-        else {
+    for (let inputElement of inputs) {
+        switch (inputElement.type) { 
+          case "file":
+            for (let file of inputElement.files) {
+              body.append(`files.${inputElement.name}`, file, file.name);
+            }
+            break;
+      
+          case 'checkbox':
+              if(checkbox) {
+                  console.log("hei"); 
+                  inputData[inputElement.name] = inputElement.value;
+              }
+            break;
+      
+          default:
             inputData[inputElement.name] = inputElement.value;
+            break;
         }
-    }
+      }
+
 
     body.append('data', JSON.stringify(inputData));             
   
@@ -94,6 +104,19 @@ async function addProduct() {
 
 
 
+    // for(let inputElement of inputs) {
+    //     if(inputElement.type === "file") {
+    //         for (let file of inputElement.files) {                            
+    //         body.append(`files.${inputElement.name}`, file, file.image);               
+    //         } 
+    //     } else if(inputElement.type === "checkbox")
+    //         if(checkbox) {
+    //         inputData[inputElement.name] = inputElement.value;
+    //     }
+    //     else {
+    //         inputData[inputElement.name] = inputElement.value;
+    //     }
+    // }
 
 
 
