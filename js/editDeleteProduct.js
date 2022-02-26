@@ -20,7 +20,6 @@ const price = document.querySelector("#price");
 const priceError = document.querySelector("#priceError");
 const description = document.querySelector("#description");
 const descriptionError = document.querySelector("#descriptionError");
-const featured = document.querySelector("#featured"); 
 const images = document.querySelector('input[type="file"]');
 const idInput = document.querySelector("#id"); 
 const messageContainer = document.querySelector(".message-container");
@@ -33,7 +32,6 @@ async function editProducts() {
         const response = await fetch(idUrl); 
         const details = await response.json(); 
 
-
         let checkbox = document.querySelector('input[type="checkbox"]');
 
         title.value = details.title; 
@@ -42,13 +40,12 @@ async function editProducts() {
         idInput.value = details.id; 
         images.file = details.image.formats.large.url; 
 
-        deleteButton(details.id); 
-
         if(details.featured === true) {
             checkbox.checked = true;
             console.log("true")
         }
 
+        deleteButton(details.id);
         // imageContainer.innerHTML = `<img src="${details.image.formats.large.url}">`
 
         console.log(details); 
