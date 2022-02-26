@@ -4,6 +4,7 @@ import { saveToStorage, getFromStorage } from "./utils/localStorage.js";
 import { cartList, cartCounter } from "./settings/variables.js";
 import { displayMessage } from "./ui/displayMessage.js";
 import { checkLength } from "./ui/checkLength.js";
+import { tokenKey } from "./settings/variables.js";
 
 createMenu(); 
 
@@ -37,7 +38,10 @@ async function editProducts() {
         idInput.value = details.id; 
         images.file = details.image.formats.large.url; 
 
-        imageContainer.innerHTML = `<img src="${details.image.formats.large.url}">`
+        deleteButton(details.id); 
+
+
+        // imageContainer.innerHTML = `<img src="${details.image.formats.large.url}">`
 
         console.log(details); 
     }
@@ -128,4 +132,44 @@ async function heihei() {
         console.log(error);
         displayMessage("error", "An error has occured", ".message-container");
     }
-  }
+}
+
+
+function deleteButton(id) {
+    const deleteContainer = document.querySelector(".delete-container");
+    deleteContainer.innerHTML = `<button type="button" class="btn delete">Delete</button>` 
+
+    const button = document.querySelector(".delete");
+    
+    button.onclick = async function() {
+        console.log(id);
+
+
+        const doDelete = confirm("Are you sure?");
+
+        if(doDelete) {
+            const idUrl = productUrl + id; 
+
+            const token = getFromStorage(tokenKey); 
+    
+            const options = {
+                method: "DELETE",
+                headers: {
+                    Authorization: `Bearer ${token}`
+                },
+            };
+    
+            try {
+                const response = await fetch(idUrl, options); 
+                const json = await response.json(); 
+
+                location.href = "/products.html";
+    
+                console.log(json);
+            }
+            catch(error) {
+                console.log(error);
+            }
+        }
+    }
+}
