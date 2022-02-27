@@ -350,6 +350,12 @@ footer {
   }
 }
 
+.login-form .edit-delete-form,
+.add-edit-delete-form .edit-delete-form,
+.edit-delete-form .edit-delete-form {
+  display: none;
+}
+
 .login-form input,
 .login-form textarea,
 .add-edit-delete-form input,
@@ -410,8 +416,20 @@ footer {
   }
 }
 
-.edit-delete-form {
-  display: none;
+.checkbox-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.checkbox-container input {
+  margin: 0px 10px 0px 0px;
+  width: 35px;
+  height: 35px;
 }
 
 .about-container .about-content {

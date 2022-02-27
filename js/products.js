@@ -2,7 +2,7 @@ import { productUrl  } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
 import { searchBar } from "./ui/searchBar.js";
 import { displayMessage } from "./ui/displayMessage.js";
-import { showAllShoes } from "./ui/showAllShoes.js";
+import { showAllShoes } from "./productFunctions/showAllShoes.js";
 
 createMenu();
 

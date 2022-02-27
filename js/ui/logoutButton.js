@@ -9,6 +9,5 @@ export function logoutButton() {
             deleteItemFromStorage(userKey); 
             location.href = "/";
         }
-
-    }
-}
+    };
+};

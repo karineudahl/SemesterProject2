@@ -7,4 +7,4 @@ export function displayCartNumber() {
     if(prodCount) {
         cartCount.innerHTML = prodCount;
     }
-}
+};

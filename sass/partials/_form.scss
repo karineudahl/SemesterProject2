@@ -13,6 +13,10 @@
     margin: 70px auto;
   }
 
+  .edit-delete-form {
+    display: none;
+  }
+
   input,
   textarea {
     height: 45px;
@@ -54,6 +58,14 @@
   }
 }
 
-.edit-delete-form {
-  display: none;
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  input {
+    margin: 0px 10px 0px 0px;
+    width: 35px;
+    height: 35px;
+  }
 }
