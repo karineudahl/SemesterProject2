@@ -57,9 +57,8 @@ p {
 
 .btn.orange,
 .cta.orange {
-  background-color: #d85c17;
-  border: #d85c17 1px solid;
-  color: #121212;
+  background-color: #b74e15;
+  border: #b74e15 1px solid;
 }
 
 .btn.orange:hover,
@@ -126,7 +125,7 @@ a {
 
 .fa-circle {
   font-size: 1em;
-  color: #d85c17;
+  color: #b74e15;
 }
 
 img {
@@ -150,7 +149,7 @@ img {
 }
 
 .loader {
-  border: 16px solid #d85c17;
+  border: 16px solid #b74e15;
   border-top: 16px solid #cbcbcb;
   border-radius: 100%;
   width: 80px;
@@ -288,7 +287,7 @@ img {
 }
 
 .menu .cart-count {
-  background-color: #d85c17;
+  background-color: #b74e15;
   border-radius: 100%;
   width: 100%;
   font-size: 0.9em;
@@ -511,7 +510,7 @@ footer .fa-snapchat-ghost {
   margin: -110px 20px 100px 20px;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
-  border-top: 4px solid #d85c17;
+  border-top: 4px solid #b74e15;
   border-radius: 2px;
 }
 
@@ -561,7 +560,7 @@ footer .fa-snapchat-ghost {
   max-width: 500px;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
-  border-top: 2px solid #d85c17;
+  border-top: 2px solid #b74e15;
   border-radius: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,7 +573,7 @@ footer .fa-snapchat-ghost {
 
 .home-all-sneakers span,
 .home-about span {
-  color: #d85c17;
+  color: #b74e15;
   font-weight: bold;
   font-size: 1.4em;
 }
