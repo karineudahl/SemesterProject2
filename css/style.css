@@ -243,7 +243,7 @@ img {
 }
 
 .menu a.active {
-  background-color: #d85c17;
+  background-color: #525252;
 }
 
 .menu .logo {
@@ -261,7 +261,7 @@ img {
 }
 
 .menu li a:hover {
-  background: #e76821;
+  background: #525252;
 }
 
 .menu ul {

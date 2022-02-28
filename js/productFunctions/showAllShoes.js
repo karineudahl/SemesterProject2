@@ -12,12 +12,12 @@ export function showAllShoes(products) {
 
         products.forEach(function(product) {
             shoesContainer.innerHTML += `<div class="product-content">
-                                         <a href="products-details.html?id=${product.id}"> 
-                                            <img src="${product.image.formats.large.url}" alt="${product.title}"></img>                                         
-                                             <h2>${product.title}<h2>
-                                             <p>kr. ${product.price}<p> 
-                                         </a>
-                                     </div>` 
+                                            <a href="products-details.html?id=${product.id}"> 
+                                                <img src="${product.image.formats.large.url}" alt="${product.title}"></img>                                         
+                                                <h2>${product.title}<h2>
+                                                <p>kr. ${product.price}<p> 
+                                            </a>
+                                        </div>` 
         }); 
     }
     if(username) {
@@ -26,12 +26,12 @@ export function showAllShoes(products) {
 
         products.forEach(function(product) {
             shoesContainer.innerHTML += `<div class="product-content">
-                                         <a href="edit-delete-product.html?id=${product.id}"> 
-                                            <img src="${product.image.formats.large.url}" alt="${product.title}"></img>                                         
-                                             <h2>${product.title}<h2>
-                                             <p>kr. ${product.price}<p> 
-                                         </a>
-                                     </div>` 
+                                            <a href="edit-delete-product.html?id=${product.id}"> 
+                                                <img src="${product.image.formats.large.url}" alt="${product.title}"></img>                                         
+                                                <h2>${product.title}<h2>
+                                                <p>kr. ${product.price}<p> 
+                                            </a>
+                                        </div>` 
         }); 
     }
 }
