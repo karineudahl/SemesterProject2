@@ -1,16 +1,13 @@
-.login-form,
-.add-edit-delete-form,
-.edit-delete-form {
-  margin: 50px 20px;
-  background-color: $color-white;
-  padding: 30px 20px 50px 20px;
+form {
+  margin: 20px;
+  background-color: $color-background;
+  padding: 20px;
   border-radius: 5px;
   box-shadow: 6px 6px 6px $color-input-fields;
 
   @media (min-width: $tablet-min-width) {
-    padding: 40px 50px 70px 50px;
-    max-width: 400px;
-    margin: 70px auto;
+    @include max-width(400px);
+    padding: 50px;
   }
 
   .edit-delete-form {
@@ -26,6 +23,7 @@
     background-color: $color-input-fields;
     border: none;
     margin-bottom: 30px;
+    font-family: $font-primary;
 
     @media (min-width: $tablet-min-width) {
       height: 60px;
@@ -34,20 +32,20 @@
   }
 
   .form-error {
-    color: red;
+    color: $color-error;
     display: none;
   }
 
   .upload-image {
-    background-color: $color-white;
+    background-color: $color-background;
+    margin-bottom: 30px;
   }
 
   input::-webkit-file-upload-button {
-    height: 45px;
     border-radius: 5px;
+    padding: 10px;
     border: 1px solid $color-header-footer;
     cursor: pointer;
-    margin: 10px 10px 15px 0px;
     box-shadow: 4px 4px 4px $color-input-fields;
   }
 
@@ -56,16 +54,16 @@
       height: 45px;
     }
   }
-}
 
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
 
-  input {
-    margin: 0px 10px 0px 0px;
-    width: 35px;
-    height: 35px;
+    input {
+      margin: 0px 10px 0px 0px;
+      width: 35px;
+      height: 35px;
+    }
   }
 }

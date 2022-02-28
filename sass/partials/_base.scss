@@ -22,6 +22,17 @@ a {
   flex: 1 0 auto;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin max-width($width) {
+  max-width: $width;
+  margin: 50px auto;
+}
+
 .fa-circle {
   font-size: 1em;
   color: $color-brand;
@@ -65,22 +76,4 @@ img {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.where-am-i-container {
-  margin: 20px 0px 20px 0px;
-
-  i {
-    font-size: 1.2em;
-  }
-}
-
-.where-am-i-container li,
-.fa-chevron-right {
-  display: inline;
-  padding-left: 10px;
-}
-
-.where-am-i-now {
-  text-decoration: underline;
 }

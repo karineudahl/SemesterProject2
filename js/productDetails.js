@@ -22,7 +22,7 @@ async function detailsProduct() {
 
         const image = details.image.formats.large.url;
 
-        whereAmI.innerHTML = `<i class="fas fa-chevron-right"></i>${details.title}`;
+        whereAmI.innerHTML = `${details.title}`;
         document.title += `${details.title}`;
 
         // hører sammen
@@ -43,7 +43,7 @@ async function detailsProduct() {
                                             <div class="detail-img-container">                                    
                                                 <img class="detail-img" src="${image}" alt="${details.title}"> 
                                             </div>    
-                                            <div>
+                                            <div class="details-information">
                                                 <h1>${details.title}<h1>
                                                 <p>kr. ${details.price}<p>                                      
                                                 <p>${details.description}<p>

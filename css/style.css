@@ -50,7 +50,7 @@ p {
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 15px;
-  color: #f2f2f2;
+  color: #ffffff;
   -webkit-box-shadow: 4px 4px 4px #cbcbcb;
           box-shadow: 4px 4px 4px #cbcbcb;
   border: none;
@@ -130,6 +130,17 @@ a {
           flex: 1 0 auto;
 }
 
+.flex-container, footer, .home-featured .featured-container, .product-page-container .product-container, .detail-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .fa-circle {
   font-size: 1em;
   color: #b74e15;
@@ -141,7 +152,7 @@ img {
 }
 
 .message {
-  color: #f2f2f2;
+  color: #ffffff;
   padding: 15px;
   margin: 10px 0px 20px 0px;
   border-radius: 5px;
@@ -189,8 +200,8 @@ img {
   }
 }
 
-.where-am-i-container {
-  margin: 20px 0px 20px 0px;
+.where-am-i-container ul {
+  padding: 20px 0px 20px 0px;
 }
 
 .where-am-i-container i {
@@ -198,13 +209,13 @@ img {
 }
 
 .where-am-i-container li,
-.fa-chevron-right {
+.where-am-i-container .fa-chevron-right {
   display: inline;
   padding-left: 10px;
 }
 
-.where-am-i-now {
-  text-decoration: underline;
+.where-am-i-container .where-am-i-now {
+  color: #525252;
 }
 
 .menu {
@@ -234,7 +245,7 @@ img {
 }
 
 .menu a {
-  color: #f2f2f2;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
@@ -312,73 +323,72 @@ img {
 }
 
 footer {
-  margin-top: 40px;
-  padding: 30px;
-  background-color: #121212;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 3rem;
+  margin-top: 40px;
+  padding: 50px 30px;
+  background-color: #121212;
 }
 
 footer a {
-  color: #f2f2f2;
-  padding-bottom: 10px;
+  color: #ffffff;
+  padding: 5px 0px;
 }
 
 footer .footer-contact a {
   display: block;
-  text-decoration: underline;
+}
+
+footer .footer-contact a:hover {
+  background: #525252;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 footer .fa-facebook-f,
 footer .fa-instagram,
 footer .fa-snapchat-ghost {
   font-size: 1.7em;
-  margin-right: 20px;
+  margin-right: 10px;
+  padding: 8px;
 }
 
-.login-form,
-.add-edit-delete-form,
-.edit-delete-form {
-  margin: 50px 20px;
-  background-color: #f2f2f2;
-  padding: 30px 20px 50px 20px;
+footer .fa-facebook-f:hover,
+footer .fa-instagram:hover,
+footer .fa-snapchat-ghost:hover {
+  background: #525252;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+form {
+  margin: 20px;
+  background-color: #efefef;
+  padding: 20px;
   border-radius: 5px;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
 }
 
 @media (min-width: 650px) {
-  .login-form,
-  .add-edit-delete-form,
-  .edit-delete-form {
-    padding: 40px 50px 70px 50px;
+  form {
     max-width: 400px;
-    margin: 70px auto;
+    margin: 50px auto;
+    padding: 50px;
   }
 }
 
-.login-form .edit-delete-form,
-.add-edit-delete-form .edit-delete-form,
-.edit-delete-form .edit-delete-form {
+form .edit-delete-form {
   display: none;
 }
 
-.login-form input,
-.login-form textarea,
-.add-edit-delete-form input,
-.add-edit-delete-form textarea,
-.edit-delete-form input,
-.edit-delete-form textarea {
+form input,
+form textarea {
   height: 45px;
   width: 100%;
   font-size: 1em;
@@ -386,54 +396,43 @@ footer .fa-snapchat-ghost {
   background-color: #cbcbcb;
   border: none;
   margin-bottom: 30px;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
 }
 
 @media (min-width: 650px) {
-  .login-form input,
-  .login-form textarea,
-  .add-edit-delete-form input,
-  .add-edit-delete-form textarea,
-  .edit-delete-form input,
-  .edit-delete-form textarea {
+  form input,
+  form textarea {
     height: 60px;
     font-size: 1.2em;
   }
 }
 
-.login-form .form-error,
-.add-edit-delete-form .form-error,
-.edit-delete-form .form-error {
-  color: red;
+form .form-error {
+  color: #a12815;
   display: none;
 }
 
-.login-form .upload-image,
-.add-edit-delete-form .upload-image,
-.edit-delete-form .upload-image {
-  background-color: #f2f2f2;
+form .upload-image {
+  background-color: #efefef;
+  margin-bottom: 30px;
 }
 
-.login-form input::-webkit-file-upload-button,
-.add-edit-delete-form input::-webkit-file-upload-button,
-.edit-delete-form input::-webkit-file-upload-button {
-  height: 45px;
+form input::-webkit-file-upload-button {
   border-radius: 5px;
+  padding: 10px;
   border: 1px solid #121212;
   cursor: pointer;
-  margin: 10px 10px 15px 0px;
   -webkit-box-shadow: 4px 4px 4px #cbcbcb;
           box-shadow: 4px 4px 4px #cbcbcb;
 }
 
 @media (max-width: 649px) {
-  .login-form .btn,
-  .add-edit-delete-form .btn,
-  .edit-delete-form .btn {
+  form .btn {
     height: 45px;
   }
 }
 
-.checkbox-container {
+form .checkbox-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,7 +442,7 @@ footer .fa-snapchat-ghost {
   margin-bottom: 30px;
 }
 
-.checkbox-container input {
+form .checkbox-container input {
   margin: 0px 10px 0px 0px;
   width: 35px;
   height: 35px;
@@ -475,7 +474,7 @@ footer .fa-snapchat-ghost {
 @media (min-width: 650px) {
   .about-container {
     max-width: 700px;
-    margin: 70px auto;
+    margin: 50px auto;
   }
 }
 
@@ -494,29 +493,19 @@ footer .fa-snapchat-ghost {
   }
 }
 
-@media (min-width: 900px) {
-  .home-featured-container {
-    margin: 40px;
-  }
-}
-
 .home-featured {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding: 10px 20px 60px 20px;
   margin: -110px 20px 100px 20px;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
   border-top: 4px solid #b74e15;
   border-radius: 2px;
-}
-
-.home-featured .home-featured-heading {
   text-align: center;
 }
 
 .home-featured h1 {
   text-transform: uppercase;
-  padding-bottom: 60px;
 }
 
 @media (min-width: 650px) {
@@ -525,32 +514,9 @@ footer .fa-snapchat-ghost {
   }
 }
 
-.home-featured .featured-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-}
-
-@media (min-width: 900px) {
-  .home-featured .featured-container {
-    -ms-grid-columns: (minmax(25%, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-  }
-}
-
-@media (min-width: 900px) {
-  .home-featured {
-    margin: -110px auto 100px auto;
-    max-width: 1300px;
-    -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-  }
-}
-
 .home-all-sneakers,
 .home-about {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding: 40px 20px;
   margin: 20px auto;
   max-width: 500px;
@@ -588,7 +554,7 @@ footer .fa-snapchat-ghost {
   .home-all-sneakers,
   .home-about {
     max-width: 800px;
-    margin: 70px auto;
+    margin: 50px auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -610,31 +576,11 @@ footer .fa-snapchat-ghost {
 
 .product-page-container {
   max-width: 1600px;
-  margin: auto;
+  margin: 50px auto;
 }
 
 .product-page-container .product-page-text {
   margin: 10px;
-}
-
-.product-page-container .search-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.product-page-container .search {
-  height: 40px;
-  font-size: 0.8em;
-  width: 100%;
-  border-radius: 5px;
-  padding: 5px -10px 5px 10px;
-  background-color: #e5e5e3;
-  border: none;
 }
 
 .product-page-container .product-heading-container {
@@ -650,47 +596,53 @@ footer .fa-snapchat-ghost {
           flex-direction: column;
 }
 
-.product-page-container .product-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.product-content {
+.product-content, .home-featured .featured-content {
   margin: 10px;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
 }
 
-.product-content h2 {
+.product-content h2, .home-featured .featured-content h2 {
   font-size: 1.1em;
   text-transform: uppercase;
 }
 
-.product-content p {
+.product-content p, .home-featured .featured-content p {
   font-size: 0.8em;
 }
 
-.product-content img {
-  width: 100%;
+.product-content img, .home-featured .featured-content img {
+  width: 300px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.product-content:hover {
+.product-content:hover, .home-featured .featured-content:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
+.search {
+  height: 60px;
+  width: 100%;
+  background-color: #efefef;
+  border: none;
+  font-size: 1.3em;
+}
+
 .detail-container {
-  margin: 30px;
+  gap: 3rem;
+  margin: 100px 30px 30px 30px;
+}
+
+.detail-container .details-information {
+  max-width: 500px;
+}
+
+.detail-container p {
+  font-size: 0.5em;
 }
 
 .detail-container img {
@@ -698,32 +650,9 @@ footer .fa-snapchat-ghost {
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 30px 30px 0px 0px;
-}
-
-.detail-container .detail-img-container {
-  text-align: center;
-}
-
-.detail-container p {
-  font-size: 0.5em;
 }
 
 @media (min-width: 650px) {
-  .detail-container img {
-    width: 450px;
-    height: 450px;
-  }
-}
-
-@media (min-width: 900px) {
-  .detail-container {
-    max-width: 1000px;
-    margin: 70px auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .detail-container img {
     width: 500px;
     height: 500px;
@@ -731,7 +660,7 @@ footer .fa-snapchat-ghost {
 }
 
 .cart-container {
-  background-color: #f2f2f2;
+  background-color: #efefef;
   padding: 20px;
   margin: 50px 20px;
 }
@@ -739,7 +668,7 @@ footer .fa-snapchat-ghost {
 @media (min-width: 650px) {
   .cart-container {
     max-width: 600px;
-    margin: 60px auto;
+    margin: 50px auto;
   }
 }
 
@@ -782,32 +711,18 @@ footer .fa-snapchat-ghost {
           justify-content: flex-end;
 }
 
+.cart-container .fa-times {
+  margin-left: 10px;
+}
+
 .cart-container .fa-times:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   cursor: pointer;
-}
-
-.cart-container p {
-  margin: 0px 10px 0px 0px;
-  font-size: 0.8em;
-}
-
-@media (min-width: 650px) {
-  .cart-container p {
-    font-size: 1em;
-  }
 }
 
 .cart-container a {
   text-decoration: underline;
-  font-size: 0.8em;
-}
-
-@media (min-width: 650px) {
-  .cart-container a {
-    font-size: 1em;
-  }
 }
 
 .cart-container img {

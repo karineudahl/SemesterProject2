@@ -1,11 +1,10 @@
 .cart-container {
-  background-color: $color-white;
+  background-color: $color-background;
   padding: 20px;
   margin: 50px 20px;
 
   @media (min-width: $tablet-min-width) {
-    max-width: 600px;
-    margin: 60px auto;
+    @include max-width(600px);
   }
 
   .no-products-content {
@@ -33,27 +32,17 @@
     justify-content: flex-end;
   }
 
-  .fa-times:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
+  .fa-times {
+    margin-left: 10px;
 
-  p {
-    margin: 0px 10px 0px 0px;
-    font-size: 0.8em;
-
-    @media (min-width: $tablet-min-width) {
-      font-size: 1em;
+    &:hover {
+      transform: scale(1.2);
+      cursor: pointer;
     }
   }
 
   a {
     text-decoration: underline;
-    font-size: 0.8em;
-
-    @media (min-width: $tablet-min-width) {
-      font-size: 1em;
-    }
   }
 
   img {

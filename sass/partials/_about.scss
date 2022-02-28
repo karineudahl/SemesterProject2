@@ -22,7 +22,6 @@
   }
 
   @media (min-width: $tablet-min-width) {
-    max-width: 700px;
-    margin: 70px auto;
+    @include max-width(700px);
   }
 }
