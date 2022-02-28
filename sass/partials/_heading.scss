@@ -46,8 +46,12 @@
   }
 
   li a {
-    padding: 2px;
+    padding: 5px;
     font-size: 1em;
+
+    i {
+      font-size: 1.2em;
+    }
 
     &:hover {
       background: lighten($color: $color-header-footer, $amount: 25);

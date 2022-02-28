@@ -256,8 +256,12 @@ img {
 }
 
 .menu li a {
-  padding: 2px;
+  padding: 5px;
   font-size: 1em;
+}
+
+.menu li a i {
+  font-size: 1.2em;
 }
 
 .menu li a:hover {
