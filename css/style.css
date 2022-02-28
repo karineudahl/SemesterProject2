@@ -345,6 +345,11 @@ footer .footer-contact a {
   text-decoration: underline;
 }
 
+footer .footer-icons img {
+  width: 20px;
+  color: #f2f2f2;
+}
+
 footer .fa-facebook-f,
 footer .fa-instagram,
 footer .fa-snapchat-ghost {
