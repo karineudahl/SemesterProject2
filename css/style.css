@@ -661,8 +661,7 @@ form .checkbox-container input {
 
 .cart-container {
   background-color: #efefef;
-  padding: 20px;
-  margin: 50px 20px;
+  padding: 15px;
 }
 
 @media (min-width: 650px) {
@@ -723,6 +722,10 @@ form .checkbox-container input {
 
 .cart-container a {
   text-decoration: underline;
+}
+
+.cart-container p {
+  margin: 3px;
 }
 
 .cart-container img {

@@ -1,7 +1,6 @@
 .cart-container {
   background-color: $color-background;
-  padding: 20px;
-  margin: 50px 20px;
+  padding: 15px;
 
   @media (min-width: $tablet-min-width) {
     @include max-width(600px);
@@ -43,6 +42,10 @@
 
   a {
     text-decoration: underline;
+  }
+
+  p {
+    margin: 3px;
   }
 
   img {

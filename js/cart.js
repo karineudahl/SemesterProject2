@@ -21,13 +21,13 @@ productsInCart.forEach((cartElement) => {
                                         </div>               
                                     </div>                           
                                     <div class="cart-content-container">  
-                                        <p>kr. ${cartElement.price}</p>
+                                        <p>kr. ${cartElement.price},00</p>
                                         <i class="fas fa-times" data-id="${cartElement.id}"></i>
                                     </div>
                                 </div>` 
 
     total += parseInt(cartElement.price); 
-    totalContainer.innerHTML = `<p>Total: ${total} kr</p>`;  
+    totalContainer.innerHTML = `<p>Total kr. ${total},00</p>`;  
     
     const deleteItem = document.querySelectorAll(".fa-times"); 
 
