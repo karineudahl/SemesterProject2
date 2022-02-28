@@ -37,6 +37,7 @@ img {
   padding: 15px;
   margin: 10px 0px 20px 0px;
   border-radius: 5px;
+  text-align: center;
 }
 
 .message.error {
@@ -68,6 +69,10 @@ img {
 
 .where-am-i-container {
   margin: 20px 0px 20px 0px;
+
+  i {
+    font-size: 1.2em;
+  }
 }
 
 .where-am-i-container li,

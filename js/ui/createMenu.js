@@ -21,7 +21,7 @@ export default function createMenu() {
                                         </ul>
                                     </div>
                                     <div class="menu-logout-button-container">
-                                        <button id="logoutButton" class="btn-logout">Logout, ${username}</button>
+                                        <button id="logoutButton" class="btn btn-logout">Logout, ${username}</button>
                                     </div>
                                 </nav>`;
     };

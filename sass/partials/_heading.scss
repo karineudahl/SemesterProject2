@@ -18,20 +18,6 @@
     text-transform: uppercase;
   }
 
-  .btn-logout {
-    height: 30px;
-    font-size: 0.9em;
-    margin-bottom: 15px;
-    color: $color-header-footer;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px lighten($color: $color-header-footer, $amount: 40);
-
-    &:hover {
-      transform: scale(1.02);
-    }
-  }
-
   a.active {
     background-color: lighten($color: $color-header-footer, $amount: 25);
   }

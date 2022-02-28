@@ -1,42 +1,37 @@
 .product-page-container {
+  max-width: 1600px;
+  margin: auto;
+
   .product-page-text {
     margin: 10px;
   }
 
+  .search-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Kanskje bruke input fra forms - hvis det går ann å exportere den og importere her.
   .search {
     height: 40px;
     font-size: 0.8em;
-    width: 250px;
+    width: 100%;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px -10px 5px 10px;
     background-color: $color-background;
     border: none;
-
-    @media (min-width: $tablet-min-width) {
-      width: 400px;
-    }
   }
 
-  .no-products {
-    margin: 10px;
+  .product-heading-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-
-    @media (min-width: $tablet-min-width) {
-      grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
-    }
-
-    @media (min-width: $computer-min-width) {
-      grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    }
-  }
-
-  @media (min-width: $computer-min-width) {
-    max-width: 1500px;
-    margin: 70px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

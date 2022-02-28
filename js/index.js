@@ -21,7 +21,7 @@ async function featuredProducts() {
             for (var i = 0; i < products.length; i++) {
                 if(products[i].featured === true) {
                     featuredContainer.innerHTML += `<div class="product-content">
-                                                        <a href="products-details.html?id=${products[i].id}">
+                                                        <a href="products-details.html?id=${products[i].id}" aria-label="${products[i].title}">
                                                             <img src="${products[i].image.formats.large.url}" alt="${products[i].title}">
                                                             <h2>${products[i].title}<h2>
                                                             <p>kr. ${products[i].price}<p> 
@@ -29,13 +29,13 @@ async function featuredProducts() {
                                                     </div>`
                 };
             };
-        }
+        } 
 
         if(username) {
             for (var i = 0; i < products.length; i++) {
                 if(products[i].featured === true) {
                     featuredContainer.innerHTML += `<div class="product-content">
-                                                        <a href="edit-delete-product.html?id=${products[i].id}">
+                                                        <a href="edit-delete-product.html?id=${products[i].id}" aria-label="${products[i].title}">
                                                             <img src="${products[i].image.formats.large.url}" alt="${products[i].title}">
                                                             <h2>${products[i].title}<h2>
                                                             <p>kr. ${products[i].price}<p> 

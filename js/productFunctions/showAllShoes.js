@@ -7,8 +7,7 @@ export function showAllShoes(products) {
     shoesContainer.innerHTML = ""; 
     
     if(!username) {
-        headingContainer.innerHTML = `<h1>Shoes</h1>
-                                      <p>Search for your favorite shoes</p>`; 
+        headingContainer.innerHTML = `<h1>Shoes</h1>`; 
 
         products.forEach(function(product) {
             shoesContainer.innerHTML += `<div class="product-content">
@@ -21,8 +20,7 @@ export function showAllShoes(products) {
         }); 
     }
     if(username) {
-        headingContainer.innerHTML = `<h1>Edit or delete products</h1>                         
-                                      <p>Search shoes</p>`;
+        headingContainer.innerHTML = `<h1>Edit or delete products</h1>`;
 
         products.forEach(function(product) {
             shoesContainer.innerHTML += `<div class="product-content">
@@ -34,4 +32,4 @@ export function showAllShoes(products) {
                                         </div>` 
         }); 
     }
-}
+} 
