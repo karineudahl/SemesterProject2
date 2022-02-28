@@ -37,7 +37,7 @@ function tryTologIn(event) {
 
     if(checkLength(username.value, 5) && checkLength(password.value, 6)) {
         loggedIn(usernameValue, passwordValue);
-    }
+    } 
 }
 
 async function loggedIn(username, password) {

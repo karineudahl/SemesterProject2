@@ -12,10 +12,10 @@
   &.orange {
     background-color: $color-brand;
     border: $color-brand 1px solid;
+    color: $color-header-footer;
 
     &:hover {
       background-color: $color-white;
-      color: $color-brand;
     }
   }
 

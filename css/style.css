@@ -59,12 +59,12 @@ p {
 .cta.orange {
   background-color: #d85c17;
   border: #d85c17 1px solid;
+  color: #121212;
 }
 
 .btn.orange:hover,
 .cta.orange:hover {
   background-color: #f2f2f2;
-  color: #d85c17;
 }
 
 .btn.login-add, .btn.add-to-cart,
