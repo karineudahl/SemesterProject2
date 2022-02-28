@@ -72,9 +72,9 @@ img {
 .where-am-i-container li,
 .fa-chevron-right {
   display: inline;
-  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .where-am-i-now {
-  color: darken($color: $color-input-fields, $amount: 30);
+  text-decoration: underline;
 }
