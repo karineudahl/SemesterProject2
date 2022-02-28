@@ -24,7 +24,7 @@ productsInCart.forEach((cartElement) => {
                                         <p>kr. ${cartElement.price}</p>
                                         <i class="fas fa-times" data-id="${cartElement.id}"></i>
                                     </div>
-                                </div>`
+                                </div>` 
 
     total += parseInt(cartElement.price); 
     totalContainer.innerHTML = `<p>Total: ${total} kr</p>`;  
@@ -66,6 +66,7 @@ function removeFromList(event) {
 
 
 
+
 // import createMenu from "./ui/createMenu.js";
 // import { getFromStorage, saveToStorage } from "./utils/localStorage.js";
 // import { cartList, cartCounter } from "./settings/variables.js";
@@ -87,6 +88,9 @@ function removeFromList(event) {
 //                                             <p>${cartElement.title}</p>
 //                                             <a href="products-details.html?id=${cartElement.id}">View product</a>
 //                                         </div>               
+//                                     </div>
+//                                     <div>
+//                                         <p class="count-each-object"></p>
 //                                     </div>                           
 //                                     <div class="cart-content-container">  
 //                                         <p>kr. ${cartElement.price}</p>

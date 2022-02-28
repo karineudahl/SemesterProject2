@@ -12,37 +12,32 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/3ca04481c9.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    
-    <header>
-        <div class="menu-container"></div>
-    </header>
-
-    <main>
-
-        <nav class="where-am-i-container">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html" class="where-am-i-now"><i class="fas fa-chevron-right"></i>Shoes</a></li>
-            </ul>
-        </nav>
-
-        <div class="product-page-container">         
-            <div class="product-page-text">
-                <div class="product-heading-container"></div>
-                <div class="search-container">
-                    <input class="search" id="search" placeholder="Search for shoes ...">
+<body>   
+    <div class="wrapper">
+        <header>
+            <div class="menu-container"></div>
+        </header>
+        <main>
+            <nav class="where-am-i-container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="where-am-i-now"><i class="fas fa-chevron-right"></i>Shoes</a></li>
+                </ul>
+            </nav>
+            <div class="product-page-container">         
+                <div class="product-page-text">
+                    <div class="product-heading-container"></div>
+                    <div class="search-container">
+                        <input class="search" id="search" placeholder="Search for shoes ...">
+                    </div>
                 </div>
-            </div>
-            <div class="product-container">
-                <div class="loader"></div>
-            </div>
-            <div class="no-products"></div>
-        </div>
-        
-    </main>
-
-
+                <div class="product-container">
+                    <div class="loader"></div>
+                </div>
+                <div class="no-products"></div>
+            </div>       
+        </main>
+    </div>
     <footer>
         <div> 
             <i class="fas fa-circle"></i>
@@ -58,8 +53,7 @@
             <p><a href="mailto:sneakers@gmail.com">sneakers@gmail.com</a></p>
             <i class="fas fa-circle"></i>
         </div>  
-</footer>
-
+    </footer>
     <script src="js/products.js" type="module"></script>
 </body>
 </html>
