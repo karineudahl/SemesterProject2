@@ -326,18 +326,12 @@ footer {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 footer a {
   color: #f2f2f2;
-  font-size: 0.8em;
-}
-
-@media (min-width: 650px) {
-  footer a {
-    font-size: 1em;
-  }
+  padding-bottom: 10px;
 }
 
 footer .footer-contact a {
@@ -345,16 +339,11 @@ footer .footer-contact a {
   text-decoration: underline;
 }
 
-footer .footer-icons img {
-  width: 20px;
-  color: #f2f2f2;
-}
-
 footer .fa-facebook-f,
 footer .fa-instagram,
 footer .fa-snapchat-ghost {
   font-size: 1.7em;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .login-form,
