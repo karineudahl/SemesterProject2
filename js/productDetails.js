@@ -28,16 +28,15 @@ async function detailsProduct() {
         // hører sammen
         const shoesInCart = getFromStorage(cartList);
         let cssClass = "add-to-cart"; 
+        let btnText = "Add to cart"; 
         const doesObjectExist = shoesInCart.find(function(fav) { 
             return parseInt(fav.id) === details.id;
         })
 
         if(doesObjectExist) {
-            cssClass = "delete"; 
-            
-        }
-        // hører sammen 
-
+            cssClass = "delete";
+            btnText = "Delete";
+        } 
 
         detailsContainer.innerHTML =    `<div class="detail-container">
                                             <div class="detail-img-container">                                    
@@ -47,7 +46,7 @@ async function detailsProduct() {
                                                 <h1>${details.title}<h1>
                                                 <p>kr. ${details.price}<p>                                      
                                                 <p>${details.description}<p>
-                                                <button class="cta ${cssClass}" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-description="${details.description}" data-image="${image}">Add to cart</button>
+                                                <button class="cta ${cssClass}" data-id="${details.id}" data-title="${details.title}" data-price="${details.price}" data-description="${details.description}" data-image="${image}">${btnText}</button>
                                             </div>                                                                                                             
                                         </div>`;
      
@@ -57,7 +56,7 @@ async function detailsProduct() {
             button.addEventListener("click", addToStorage); 
         });
 
-        function addToStorage() {
+        function addToStorage(event) {
             this.classList.toggle("delete");
             this.classList.toggle("add-to-cart");
 
@@ -86,7 +85,7 @@ async function detailsProduct() {
                     saveToStorage(cartCounter, 1);
                     cartCount.innerHTML = numberInCart = 1;
                 }
-
+                event.target.innerHTML = "Delete";
             }
             else {
                 const newFavs = currentShoes.filter((shoe) => shoe.id !== id );
@@ -94,11 +93,12 @@ async function detailsProduct() {
 
                 saveToStorage(cartCounter, numberInCart - 1);
                 cartCount.innerHTML = numberInCart - 1;    
-                
+                event.target.innerHTML = "Add to cart";
             }
         }          
     }
     catch(error) {
+        console.log(error)
         displayMessage("error", "An error has occoured", ".product-details-container"); 
     }
 }
