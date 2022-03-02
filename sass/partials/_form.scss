@@ -50,6 +50,7 @@ form {
 
   input::-webkit-file-upload-button {
     border-radius: 5px;
+    height: 50px;
     padding: 10px;
     border: 1px solid $color-header-footer;
     cursor: pointer;
