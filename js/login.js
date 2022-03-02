@@ -20,7 +20,7 @@ function tryTologIn(event) {
     event.preventDefault(); 
     messageContainer.innerHTML = ""; 
 
-    if(checkLength(username.value, 5)) {
+    if(checkLength(username.value, 4)) {
         usernameError.style.display = "none";
     } else {
         usernameError.style.display = "block";
@@ -35,7 +35,7 @@ function tryTologIn(event) {
     const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();  
 
-    if(checkLength(username.value, 5) && checkLength(password.value, 6)) {
+    if(checkLength(username.value, 4) && checkLength(password.value, 6)) {
         loggedIn(usernameValue, passwordValue);
     } 
 }

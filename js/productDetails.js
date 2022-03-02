@@ -21,7 +21,7 @@ async function detailsProduct() {
         const details = await response.json(); 
 
         const image = details.image.formats.large.url;
-        whereAmI.innerHTML = `${details.title}`;
+        whereAmI.innerHTML = `<a href="products-details.html?id=${details.id}" aria-label="${details.title}">${details.title}</a>`;
         document.title += ` ${details.title}`;
 
         let cssClass = "add-to-cart"; 

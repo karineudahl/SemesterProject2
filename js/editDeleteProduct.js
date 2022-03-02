@@ -70,13 +70,13 @@ function submitForm(event) {
         priceError.style.display = "block";
     }
     
-    if(checkLength(description.value, 5)) {
+    if(checkLength(description.value, 30)) {
         descriptionError.style.display = "none";
     } else {
         descriptionError.style.display = "block";
     }
 
-    if(checkLength(title.value, 2) && checkLength(price.value, 2) && checkLength(description.value, 5)) {
+    if(checkLength(title.value, 2) && checkLength(price.value, 2) && checkLength(description.value, 30)) {
         updateProduct()
     }
 }
