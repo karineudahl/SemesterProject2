@@ -117,6 +117,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-image: url(../images/texture.png);
 }
 
 a {
@@ -368,7 +369,7 @@ footer .fa-snapchat-ghost:hover {
 
 form {
   margin: 20px;
-  background-color: #efefef;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 5px;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
@@ -378,7 +379,7 @@ form {
 @media (min-width: 650px) {
   form {
     max-width: 400px;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 50px;
   }
 }
@@ -413,7 +414,7 @@ form .form-error {
 }
 
 form .upload-image {
-  background-color: #efefef;
+  background-color: #ffffff;
   margin-bottom: 30px;
 }
 
@@ -448,6 +449,14 @@ form .checkbox-container input {
   height: 35px;
 }
 
+.about-container {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 6px 6px 6px #cbcbcb;
+          box-shadow: 6px 6px 6px #cbcbcb;
+}
+
 .about-container .about-content {
   margin: 30px;
 }
@@ -474,7 +483,7 @@ form .checkbox-container input {
 @media (min-width: 650px) {
   .about-container {
     max-width: 700px;
-    margin: 50px auto;
+    margin: 30px auto;
   }
 }
 
@@ -554,7 +563,7 @@ form .checkbox-container input {
   .home-all-sneakers,
   .home-about {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 30px auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -576,7 +585,7 @@ form .checkbox-container input {
 
 .product-page-container {
   max-width: 1600px;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 .product-page-container .product-page-text {
@@ -627,7 +636,7 @@ form .checkbox-container input {
 .search {
   height: 60px;
   width: 100%;
-  background-color: #efefef;
+  background-color: #ffffff;
   border: none;
   font-size: 1.3em;
 }
@@ -635,6 +644,11 @@ form .checkbox-container input {
 .detail-container {
   gap: 3rem;
   margin: 100px 30px 30px 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 6px 6px 6px #cbcbcb;
+          box-shadow: 6px 6px 6px #cbcbcb;
 }
 
 .detail-container .details-information {
@@ -660,14 +674,14 @@ form .checkbox-container input {
 }
 
 .cart-container {
-  background-color: #efefef;
+  background-color: #ffffff;
   padding: 15px;
 }
 
 @media (min-width: 650px) {
   .cart-container {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 30px auto;
   }
 }
 

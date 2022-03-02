@@ -11,6 +11,7 @@ body {
   font-family: $font-primary;
   display: flex;
   flex-direction: column;
+  background-image: url(../images/texture.png);
 }
 
 a {
@@ -30,7 +31,7 @@ a {
 
 @mixin max-width($width) {
   max-width: $width;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 .fa-circle {
