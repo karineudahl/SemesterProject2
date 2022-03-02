@@ -1,5 +1,7 @@
 To log in: 
+
 Username: Karine
+
 Password: password1
 
 # karine-udahl-semester-project-2
