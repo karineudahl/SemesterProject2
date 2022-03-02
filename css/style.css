@@ -635,6 +635,7 @@ form .checkbox-container input {
   background-color: #ffffff;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
+  padding: 10px;
 }
 
 .product-content h2, .home-featured .featured-content h2 {

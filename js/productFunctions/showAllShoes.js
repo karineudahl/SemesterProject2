@@ -26,8 +26,9 @@ export function showAllShoes(products) {
             shoesContainer.innerHTML += `<div class="product-content">
                                             <a href="edit-delete-product.html?id=${product.id}" aria-label="${product.title}"> 
                                                 <img src="${product.image.formats.large.url}" alt="${product.title}"></img>                                         
-                                                <h2>Edit: ${product.title}<h2>
+                                                <h2>${product.title}<h2>
                                                 <p>kr. ${product.price}<p> 
+                                                <button class="btn add-to-cart">Edit</button>
                                             </a>
                                         </div>` 
         }); 
