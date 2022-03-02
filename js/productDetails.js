@@ -1,8 +1,9 @@
 import { productUrl  } from "./settings/api.js";
 import createMenu from "./ui/createMenu.js";
-import { saveToStorage, getFromStorage } from "./utils/localStorage.js";
-import { cartList, cartCounter } from "./settings/variables.js";
+import { getFromStorage } from "./utils/localStorage.js";
+import { cartList } from "./settings/variables.js";
 import { displayMessage } from "./ui/displayMessage.js";
+import { addProductToCart } from "./productFunctions/addProductToCart.js";
 
 createMenu(); 
 
@@ -12,7 +13,6 @@ const id = params.get("id");
 const url = productUrl + id; 
 
 const detailsContainer = document.querySelector(".product-details-container");
-const cartCount = document.querySelector(".cart-count");
 const whereAmI = document.querySelector("#where-am-i-products-details"); 
 
 async function detailsProduct() {
@@ -21,14 +21,13 @@ async function detailsProduct() {
         const details = await response.json(); 
 
         const image = details.image.formats.large.url;
-
         whereAmI.innerHTML = `${details.title}`;
-        document.title += `${details.title}`;
+        document.title += ` ${details.title}`;
 
-        // hører sammen
-        const shoesInCart = getFromStorage(cartList);
         let cssClass = "add-to-cart"; 
         let btnText = "Add to cart"; 
+
+        const shoesInCart = getFromStorage(cartList);
         const doesObjectExist = shoesInCart.find(function(fav) { 
             return parseInt(fav.id) === details.id;
         })
@@ -53,52 +52,10 @@ async function detailsProduct() {
         const btnAddToCart = document.querySelectorAll(".detail-container button"); 
         
         btnAddToCart.forEach(function(button) {
-            button.addEventListener("click", addToStorage); 
-        });
-
-        function addToStorage(event) {
-            this.classList.toggle("delete");
-            this.classList.toggle("add-to-cart");
-
-            const id = this.dataset.id; 
-            const title = this.dataset.title; 
-            const price = this.dataset.price; 
-            const description = this.dataset.description; 
-            const image = this.dataset.image;
-
-            const currentShoes = getFromStorage(cartList); 
-            let numberInCart = parseInt(getFromStorage(cartCounter)); 
-
-            const productExist = currentShoes.find(function(shoe) {
-                return shoe.id === id; 
-            });
-
-            if(productExist === undefined) {
-                const product = { id: id, title: title, price: price, description: description, image: image };
-                currentShoes.push(product);
-                saveToStorage(cartList, currentShoes);                
-                          
-                if(numberInCart) {
-                    saveToStorage(cartCounter, numberInCart + 1);
-                    cartCount.innerHTML = numberInCart + 1;
-                } else {
-                    saveToStorage(cartCounter, 1);
-                    cartCount.innerHTML = numberInCart = 1;
-                }
-                event.target.innerHTML = "Remove from cart";
-            }
-            else {
-                const newFavs = currentShoes.filter((shoe) => shoe.id !== id );
-                saveToStorage(cartList, newFavs); 
-
-                saveToStorage(cartCounter, numberInCart - 1);
-                cartCount.innerHTML = numberInCart - 1;    
-                event.target.innerHTML = "Add to cart";
-            }
-        }          
+            button.addEventListener("click", addProductToCart); 
+        });       
     }
     catch(error) {
-        console.log(error)
         displayMessage("error", "An error has occoured", ".product-details-container"); 
     }
 }

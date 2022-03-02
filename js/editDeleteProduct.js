@@ -79,4 +79,4 @@ function submitForm(event) {
     if(checkLength(title.value, 2) && checkLength(price.value, 2) && checkLength(description.value, 5)) {
         updateProduct()
     }
-};
+}

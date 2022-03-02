@@ -3,12 +3,12 @@ import { logoutButton } from "./logoutButton.js";
 import { displayCartNumber } from "./displayCartNumber.js";
 
 export default function createMenu() {
-    const container = document.querySelector(".menu-container"); 
+    const menuContainer = document.querySelector(".menu-container"); 
     const { pathname } = document.location; 
     const username = getUsername();
 
     if(username) { 
-        container.innerHTML =  `<nav class="menu">
+        menuContainer.innerHTML =  `<nav class="menu">
                                     <div class="menu-container"> 
                                         <div> 
                                             <a href="/" class="logo">Sneakers</a>
@@ -27,7 +27,7 @@ export default function createMenu() {
     };
 
     if(!username) {
-        container.innerHTML =   `<nav class="menu">
+        menuContainer.innerHTML =   `<nav class="menu">
                                     <div class="menu-container"> 
                                         <div> 
                                             <a href="/" class="logo">Sneakers</a>
@@ -45,4 +45,4 @@ export default function createMenu() {
                    
     logoutButton();         
     displayCartNumber();
-}; 
+}

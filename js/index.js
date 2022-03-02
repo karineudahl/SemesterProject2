@@ -49,6 +49,6 @@ async function featuredProducts() {
     catch(error) {
         displayMessage("error", "An error has occoured", ".featured-container"); 
     }
-};
+}
 
 featuredProducts();

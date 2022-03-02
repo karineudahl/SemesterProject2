@@ -1,11 +1,17 @@
-.detail-container {
-  @extend .flex-container;
-  gap: 3rem;
-  margin: 100px 30px 30px 30px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 6px 6px 6px $color-input-fields;
+.product-details-container {
+  margin: 20px;
+
+  .detail-container {
+    @extend .flex-container;
+    gap: 3rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 6px 6px 6px $color-input-fields;
+
+    @media (min-width: $tablet-min-width) {
+      @include max-width(1100px);
+    }
+  }
 
   .details-information {
     max-width: 500px;

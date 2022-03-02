@@ -10,4 +10,4 @@ export function logoutButton() {
             location.href = "/";
         }
     }; 
-};
+}

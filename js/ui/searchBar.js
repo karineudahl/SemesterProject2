@@ -6,7 +6,7 @@ export function searchBar(products) {
     const noProduct = document.querySelector(".no-products")
 
     searchBar.onkeyup = function() {
-        const searchValue = event.target.value.trim().toLowerCase();
+        const searchValue = this.value.trim().toLowerCase();
         
         const filteredSearch = products.filter((product) => {               
             if(product.title.toLowerCase().includes(searchValue) ||
@@ -24,4 +24,4 @@ export function searchBar(products) {
         containerShoes.innerHTML = ""; 
         showAllShoes(filteredSearch);
     }; 
-};
+}
