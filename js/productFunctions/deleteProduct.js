@@ -9,7 +9,7 @@ export function deleteProduct(id) {
     const button = document.querySelector(".delete");
 
     button.onclick = async function() {
-        const doDelete = confirm("Are you sure?");
+        const doDelete = confirm("Do you want to delete this product? \nIt is not reversible");
 
         if(doDelete) {
             const idUrl = productUrl + id; 
