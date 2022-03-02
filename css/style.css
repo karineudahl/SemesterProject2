@@ -434,7 +434,7 @@ form .upload-image {
 
 form input::-webkit-file-upload-button {
   border-radius: 5px;
-  height: 50px;
+  height: 40px;
   padding: 10px;
   border: 1px solid #121212;
   cursor: pointer;
