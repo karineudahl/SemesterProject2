@@ -24,6 +24,7 @@ form {
     border: none;
     margin-bottom: 30px;
     font-family: $font-primary;
+    padding: 0px;
 
     @media (min-width: $tablet-min-width) {
       height: 60px;
