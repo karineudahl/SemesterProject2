@@ -86,13 +86,15 @@ async function detailsProduct() {
                     saveToStorage(cartCounter, 1);
                     cartCount.innerHTML = numberInCart = 1;
                 }
+
             }
             else {
                 const newFavs = currentShoes.filter((shoe) => shoe.id !== id );
                 saveToStorage(cartList, newFavs); 
 
                 saveToStorage(cartCounter, numberInCart - 1);
-                cartCount.innerHTML = numberInCart - 1;            
+                cartCount.innerHTML = numberInCart - 1;    
+                
             }
         }          
     }
