@@ -414,6 +414,13 @@ form textarea {
   }
 }
 
+form input:focus,
+form textarea {
+  outline: none;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
 form .form-error {
   color: #a12815;
   display: none;
@@ -618,19 +625,6 @@ form .checkbox-container input {
 
 .product-page-container .product-page-text {
   margin: 10px;
-}
-
-.product-page-container .product-heading-container {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .product-content, .home-featured .featured-content {

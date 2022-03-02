@@ -6,7 +6,7 @@ import { getUsername } from "./utils/localStorage.js";
 
 createMenu();
 homeBanner();
-
+ 
 async function featuredProducts() {
     try {
         const response = await fetch(productUrl); 

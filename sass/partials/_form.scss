@@ -31,6 +31,12 @@ form {
     }
   }
 
+  input:focus,
+  textarea {
+    outline: none;
+    transform: scale(1.02);
+  }
+
   .form-error {
     color: $color-error;
     display: none;
