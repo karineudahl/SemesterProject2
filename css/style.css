@@ -468,6 +468,7 @@ form .checkbox-container input {
   border-radius: 5px;
   -webkit-box-shadow: 6px 6px 6px #cbcbcb;
           box-shadow: 6px 6px 6px #cbcbcb;
+  margin: 20px;
 }
 
 .about-container .about-content {
