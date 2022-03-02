@@ -616,7 +616,7 @@ form .checkbox-container input {
 }
 
 .product-page-container {
-  max-width: 1600px;
+  max-width: 1800px;
   margin: auto;
 }
 
@@ -652,6 +652,13 @@ form .checkbox-container input {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .product-content img, .home-featured .featured-content img {
+    height: 380px;
+    width: 380px;
+  }
 }
 
 .product-content:hover, .home-featured .featured-content:hover {

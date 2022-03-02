@@ -22,7 +22,7 @@ async function featuredProducts() {
                 if(products[i].featured === true) {
                     featuredContainer.innerHTML += `<div class="featured-content">
                                                         <a href="products-details.html?id=${products[i].id}" aria-label="${products[i].title}">
-                                                            <img src="${products[i].image.formats.large.url}" alt="${products[i].title}" class="featured-image">
+                                                            <img src="${products[i].image.formats.large.url}" alt="${products[i].title}">
                                                             <h2>${products[i].title}<h2>
                                                             <p>kr. ${products[i].price}<p> 
                                                         </a>
@@ -36,7 +36,7 @@ async function featuredProducts() {
                 if(products[i].featured === true) {
                     featuredContainer.innerHTML += `<div class="featured-content">
                                                         <a href="edit-delete-product.html?id=${products[i].id}" aria-label="${products[i].title}">
-                                                            <img src="${products[i].image.formats.large.url}" alt="${products[i].title}" class="featured-image">
+                                                            <img src="${products[i].image.formats.large.url}" alt="${products[i].title}">
                                                             <h2>${products[i].title}<h2>
                                                             <p>kr. ${products[i].price}<p> 
                                                         </a>
