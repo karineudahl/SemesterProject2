@@ -1,4 +1,4 @@
-# Sneakers (Semester Project at Noroff) 
+# Sneakers (Semester Project 2 at Noroff) 
 
 ## Username and password to log in to admin site 
 
