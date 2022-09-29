@@ -6,7 +6,7 @@ Username and password to log in to admin site
 
 <img width="1007" alt="Screenshot 2022-09-28 at 20 35 58" src="https://user-images.githubusercontent.com/74554925/192862072-c6501cf6-0bac-48aa-b49a-f86804d5811e.png">
 
-# Description 
+# Description (assignment)
 
 - Goal is to create an e-commerce website that has both customer-facing and admin sections. Both sections should be responsive and the website will be populated by a Strapi API supplied by Noroff.
 - You can choose the theme of your website. 
