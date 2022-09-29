@@ -1,10 +1,8 @@
 # Sneakers (Semester Project 2 at Noroff) 
 
-## Username and password to log in to admin site 
-
-Username: Karine
-
-Password: password1
+Username and password to log in to admin site 
+- Username: Karine
+- Password: password1
 
 <img width="1007" alt="Screenshot 2022-09-28 at 20 35 58" src="https://user-images.githubusercontent.com/74554925/192862072-c6501cf6-0bac-48aa-b49a-f86804d5811e.png">
 
