@@ -34,7 +34,8 @@ Login/Logout
 - Allow products to be deleted. Before a product is deleted you must display a confirmation dialog. The product should only be deleted if the user confirms.
 
 # Built with 
-- JavaScript and split code up using modules (imports/exports)
+- HTML
+- JavaScript (split code up using modules (imports/exports))
 - SASS
 
 # Getting started 
