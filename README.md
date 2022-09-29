@@ -39,7 +39,7 @@ Login/Logout
 - SASS
 
 # Getting started 
-- Clone the repo
+- Clone the repo: gh repo clone karineudahl/SemesterProject2
 
 # Running 
 - Right click and "Open with Live Server". 
