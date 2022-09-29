@@ -41,4 +41,4 @@ Login/Logout
 - Clone the repo
 
 # Running 
-- Right click and run open with live server. 
+- Right click and "Open with Live Server". 
