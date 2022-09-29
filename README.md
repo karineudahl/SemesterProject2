@@ -35,18 +35,12 @@ Login/Logout
 - Add/edit/delete products: create form(s) that allow products to be added, edited and deleted. The form must allow the user to toggle whether a product is featured.
 - Allow products to be deleted. Before a product is deleted you must display a confirmation dialog. The product should only be deleted if the user confirms.
 
-
-Use vanilla (regular) JavaScript for the project and split your code up using modules (imports/exports).
-
-You can use small JS libraries to perform tasks such as formatting dates with Moment.js
-
-
 # Built with 
-- Use JavaScript for the project and split your code up using modules (imports/exports)
+- JavaScript and split code up using modules (imports/exports)
 - SASS
 
 # Getting started 
-1. Clone the repo
+- Clone the repo
 
 # Running 
 - Right click and run open with live server. 
