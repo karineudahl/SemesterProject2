@@ -2,7 +2,7 @@
 
 The goal was to apply all I had learned over the first 1,5 year of study. 
 
-Username and password to log in to admin site 
+### Username and password
 - Username: Karine
 - Password: password1
 
